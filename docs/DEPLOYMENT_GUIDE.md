@@ -119,8 +119,20 @@ Open **`the local Streamlit port (typically http://localhost:8501)`** in your br
 |---|---|---|
 | **Video Source** | Local WebM files in `data/videos/` | Local lightweight clips or embedded iframe player |
 | **Timestamp Seeking** | Dynamic `st.video(..., start_time=seek_sec)` | Dynamic seeking to exact seconds |
-| **Doubt Resolution** | 100% transcript-grounded via FAISS | 100% transcript-grounded via FAISS |
+| **Doubt Resolution** | Transcript-grounded via FAISS & citation verification | Transcript-grounded via FAISS & citation verification |
 | **Smart Notes** | Full multi-style generation & markdown download | Full multi-style generation & markdown download |
 | **Practice Quiz** | Real-time interactive assessment & analytics | Real-time interactive assessment & analytics |
 | **Repository Size** | ~480 MB (with local video lectures) | **< 10 MB** (pure code & transcript metadata) |
+
+---
+
+## 6. Live Feature Verification & Prototype Disclosures
+
+> [!NOTE]
+> **Empirical Feature Verification Status:**
+> - **Ask AI:** Successfully verified in both Live AI (Gemini 3.5 Flash-Lite) and Offline Demonstration modes.
+> - **Smart Notes:** Manually verified in Offline Demonstration mode. Live generation encountered HTTP 503 capacity limits on free-tier Gemini models.
+> - **Practice Quiz:** Manually verified in Offline Demonstration mode. Live generation encountered HTTP 503 capacity limits on free-tier Gemini models.
+> - **Dual-Model Fallback:** Fallback logic is implemented in `llm.py`, but successful live fallback generation remains unverified due to concurrent upstream 503 spikes.
+> - **Scope:** LearnMate AI is an educational prototype and screening MVP, not a production-grade commercial system. Hallucination mitigation reduces ungrounded responses, but absolute hallucination prevention cannot be guaranteed.
 

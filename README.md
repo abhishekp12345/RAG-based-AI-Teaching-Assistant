@@ -8,7 +8,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **PhysicsWallah APM Builder Screening Project**  
-*Author: Abhishek Patel (`abhishekp12345`)*  
+*GitHub: @abhishekp12345*  
 *Repository: `https://github.com/abhishekp12345/RAG-based-AI-Teaching-Assistant`*  
 *Project Status: Working Educational Prototype & Screening MVP*
 
@@ -389,13 +389,20 @@ To ensure complete transparency and submission integrity, testing is categorized
 - **Syntax Verification:** **100%** of Python modules compiled with 0 errors via `py_compile`.
 - **Evaluation Financial Spend:** Strictly **₹0.00 / $0.00** across all screening testing phases by operating within Google Gemini Free Tier quotas and utilizing local offline evaluation.
 
-### 10.3 Transparent Testing Disclosures & External Limitations
-- **Live Ask AI:** Successfully verified live through Google Gemini 3.5 Flash-Lite with exact grounded citations (`LEC_01_CHK_0004` and `LEC_01_CHK_0018`).
-- **Offline Demonstration Mode:** All three features (Ask AI, Smart Notes, Practice Quiz) are **100% verified and functional** in Offline Demonstration mode.
-- **Live Smart Notes & Practice Quiz Availability:** During live testing with Google's free-tier endpoints, both `gemini-3.5-flash-lite` and `gemini-3.8-flash` encountered temporary `503 UNAVAILABLE` capacity spikes. The system safely caught these errors in < 3 seconds with 0 tokens consumed, displayed student-friendly error banners, and offered a one-click switch to Offline Demonstration mode.
-- **Dual-Model Fallback Verification:** Dual-model fallback code has been implemented in `llm.py`; however, successful end-to-end fallback generation remains unverified during live testing because Google experienced simultaneous high-demand spikes across both models.
-- **Automated Test Discovery:** Later automated test suites (`tests/test_summarizer.py` and `tests/test_quiz_generator.py`) were suspended to prevent process scheduling timeouts on Windows; core logic was verified via syntax compilation and interactive UI testing.
-- **Hallucination Defense:** Hallucination risk is significantly mitigated by strict prompt constraints and citation verification, but cannot be completely eliminated due to the probabilistic nature of Large Language Models.
+### 10.3 Transparent Testing Disclosures & Feature Verification Status
+- **Empirical Feature Verification:**
+  - **Ask AI:** Successfully verified in both **Live AI** (via Google Gemini 3.5 Flash-Lite with grounded citations `LEC_01_CHK_0004` and `LEC_01_CHK_0018`) and **Offline Demonstration** modes.
+  - **Smart Notes:** Manually verified in **Offline Demonstration mode**. Live API generation requests encountered upstream `503 UNAVAILABLE` capacity spikes on Google's free-tier endpoints.
+  - **Practice Quiz:** Manually verified in **Offline Demonstration mode**. Live API generation requests encountered upstream `503 UNAVAILABLE` capacity spikes on Google's free-tier endpoints.
+- **Dual-Model Fallback Status:**
+  - Dual-model fallback architecture has been fully implemented in `llm.py` (`gemini-3.5-flash-lite` primary with bounded single-hop fallback to `gemini-3.8-flash`).
+  - However, **successful live fallback generation remains unverified** because upstream capacity spikes affected both Gemini models simultaneously during live testing.
+- **Prototype Status & Hallucination Defense:**
+  - **Educational Prototype Scope:** LearnMate AI is an educational prototype and screening MVP designed for architectural evaluation and offline reproducible demonstrations, not a production-grade high-availability commercial deployment.
+  - **Probabilistic Risk:** While hallucination risk is substantially mitigated through trichotomous answerability classification, context window pruning (Top-6 chunks, 1600 tokens), and strict post-generation citation validation against retrieved candidates, **guaranteed hallucination prevention cannot be claimed** due to the probabilistic nature of Large Language Models.
+- **Automated Test Discovery:**
+  - 76 baseline automated tests (67 backend tests + 9 frontend AppTest tests) passed in Phases 1–7.
+  - Later automated test suites (`tests/test_summarizer.py` and `tests/test_quiz_generator.py`) were suspended to avoid Windows process scheduler timeouts; their core logic was verified via syntax compilation (`py_compile`) and manual UI testing.
 
 ---
 

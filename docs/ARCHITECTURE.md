@@ -129,9 +129,11 @@ sequenceDiagram
 
 ### 4.2 Hallucination Defense & Answerability Classifier
 The system prompt enforces strict trichotomous classification:
-1. `ANSWERABLE`: Lecture context contains direct factual evidence. Citations are verified.
+1. `ANSWERABLE`: Lecture context contains direct factual evidence. Citations are verified against candidate chunk IDs.
 2. `PARTIALLY_ANSWERABLE`: Lecture covers some aspects; missing components are explicitly disclosed.
 3. `NOT_ANSWERABLE`: Out-of-curriculum questions (e.g. quantum mechanics, cooking). The model refuses politely without guessing.
+
+*Note on Hallucination Mitigation:* While trichotomous triage, candidate citation filtering, and strict grounding prompts substantially reduce ungrounded assertions, **guaranteed hallucination prevention cannot be claimed** due to the probabilistic nature of Large Language Models.
 
 ---
 
@@ -143,6 +145,12 @@ To address high-demand capacity spikes (`503 UNAVAILABLE`) on Google Gemini Free
 - **Alternative Fallback Model:** `gemini-3.8-flash` (1M context, 65K max output, official free-tier eligible).
 - **Single Bounded Fallback:** Exactly 1 fallback attempt is permitted upon receiving an HTTP 503. If the alternative model also encounters capacity constraints, the system immediately presents a student-friendly banner and offers a one-click switch to the deterministic Offline Demonstration mode.
 - **Budget Lock:** Hardcoded to **₹0.00 / $0.00** total expenditure. Never calls paid billing endpoints.
+
+### 5.2 Empirical Verification Status & Prototype Constraints
+- **Ask AI:** Verified in both **Live AI** (Gemini 3.5 Flash-Lite) and **Offline Demonstration** modes.
+- **Smart Notes & Practice Quiz:** Verified in **Offline Demonstration mode**. Live requests encountered upstream HTTP 503 availability limits on free-tier Gemini models.
+- **Dual-Model Fallback:** Fallback logic is fully implemented in `llm.py`; however, **successful live fallback generation remains unverified** because upstream 503 capacity spikes occurred simultaneously across both models during screening tests.
+- **Prototype Status:** LearnMate AI is an educational prototype and screening MVP designed for offline reproducibility and architectural evaluation, not a production-grade high-availability commercial deployment.
 
 ---
 

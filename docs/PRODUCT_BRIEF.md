@@ -83,9 +83,20 @@ To ensure total engineering transparency, we explicitly separate proposed long-t
 | Metric Category | Proposed Production Objective | Actual Measured MVP Benchmark | Measurement Conditions & Denominator |
 |---|---|---|---|
 | **Candidate Retrieval (Hit Rate@10)** | $\ge 90\%$ on curriculum concepts | **89.47%** | 17 out of 19 evaluation queries retrieved ground-truth chunks in Top-10 candidates. |
-| **Final Context Hit Rate** | $\ge 85\%$ after context pruning | **78.95%** | 15 out of 19 queries retained ground-truth chunks after selecting Top-6 chunks (max 1600 tokens). |
+| **Final-Context Passage Hit Rate** | $\ge 85\%$ after context pruning | **78.95%** | 15 out of 19 queries retained ground-truth chunks after selecting Top-6 chunks (max 1600 tokens). |
 | **Answerability Classification** | $\ge 95\%$ correct triage | **90.0%** | 9 out of 10 test cases in single-run evaluation correctly triaged (`ANSWERABLE`, `PARTIALLY_ANSWERABLE`, `NOT_ANSWERABLE`). |
 | **Citation Precision** | 0 hallucinated chunk citations | **100%** | 100% of generated citations strictly verified against retrieved candidate chunk IDs. |
 | **Live Inference Latency** | $< 5.0$ seconds for doubt resolution | **4.96s** (Median) | 3.22s LLM generation latency on live Gemini Free Tier (~18.4s end-to-end on cold start). |
 | **API Cost per Student** | ₹0.00 / $0.00 | **₹0.00** | Strictly maintained across all testing via Google Gemini Free Tier. |
-| **Live Endpoint Resilience** | 99.9% uptime with graceful degradation | Dual-model fallback + 1-click Offline Demo | Ask AI verified live; Smart Notes & Quiz encountered upstream HTTP 503 capacity errors, handled gracefully via Offline Demo. |
+| **Live Endpoint Resilience** | Graceful degradation under load | Dual-model fallback + 1-click Offline Demo | Ask AI verified live and offline; Smart Notes & Practice Quiz manually verified in Offline Demo mode. Live generation encountered upstream HTTP 503 capacity errors with both Gemini models; dual-model fallback is implemented but successful live fallback generation remains unverified. |
+
+---
+
+## 6. Empirical Feature Verification Status & Prototype Constraints
+
+1. **Ask AI:** Successfully verified in both **Live AI** (via Google Gemini 3.5 Flash-Lite) and **Offline Demonstration** modes with accurate clickable timestamps.
+2. **Smart Notes:** Manually verified in **Offline Demonstration mode**. Live API generation requests encountered upstream `503 UNAVAILABLE` capacity spikes on Google's free-tier endpoints.
+3. **Practice Quiz:** Manually verified in **Offline Demonstration mode**. Live API generation requests encountered upstream `503 UNAVAILABLE` capacity spikes on Google's free-tier endpoints.
+4. **Dual-Model Fallback:** Fallback logic (`gemini-3.5-flash-lite` -> `gemini-3.8-flash`) is implemented in `llm.py`; however, successful end-to-end live fallback generation remains unverified due to concurrent upstream 503 capacity errors across both models.
+5. **Screening MVP Scope:** LearnMate AI is an educational prototype and screening MVP, not a production-grade high-availability system.
+6. **Hallucination Mitigation:** While trichotomous triage and citation verification substantially reduce grounded errors, guaranteed hallucination prevention cannot be claimed due to the probabilistic nature of LLMs.
