@@ -1,0 +1,84 @@
+# LearnMate AI - Git Ignore Configuration
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Environment Variables & Secrets
+.env
+*.pem
+*.key
+*.cert
+credentials.json
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Video & Audio Binaries (Do not redistribute)
+data/videos/*.mp4
+data/videos/*.webm
+data/videos/*.mkv
+data/audio/*.wav
+data/audio/*.mp3
+data/audio/*.m4a
+*.zip
+*.tar.gz
+*.7z
+
+# Third-Party Copyrighted Educational Material (CodeWithHarry Sigma Course)
+data/transcripts/SEO*
+data/transcripts/Video*
+data/transcripts/Your*
+data/transcripts/*_hi_en_corrected.json
+data/transcripts/*_original_phase2a.json
+data/transcripts/*_cleaned.json
+data/chunks/LEC_*.json
+data/chunks/all_chunks.json
+data/chunks/chunk_manifest.json
+data/chunks/chunk_statistics.json
+data/notes/LEC_*.json
+data/quizzes/LEC_*.json
+data/vector_store/chunk_metadata.json
+data/vector_store/*_results.json
+data/vector_store/*_report.json
+data/vector_store/*_analysis.json
+data/vector_store/live_*.json
+data/vector_store/smoke_*.json
+
+# Generated Embeddings & Vector Index Binary Files
+data/vector_store/*.index
+data/vector_store/*.faiss
+data/vector_store/*.npy
+data/vector_store/*.pkl
+
+# Model Caches
+.cache/
+models/
+huggingface/
+torch_cache/
+
+# Streamlit Local Runtime & Secrets
+.streamlit/secrets.toml
+
+# Scratch and Temporary Verification Logs
+scratch/
+
+# Student Feedback Logs
+data/feedback/*.json
+
+# IDE & OS Metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

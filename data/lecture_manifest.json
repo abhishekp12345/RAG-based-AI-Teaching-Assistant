@@ -1,0 +1,22 @@
+{
+  "project": "LearnMate AI",
+  "description": "Original Demonstration Lecture Manifest for PhysicsWallah APM Builder Screening",
+  "license": "MIT / Creative Commons (Project Demonstration)",
+  "total_lectures": 1,
+  "lectures": [
+    {
+      "lecture_id": "DEMO_01",
+      "lecture_title": "Introduction to HTML & Web Development Fundamentals | Demo Tutorial",
+      "tutorial_number": 1,
+      "video_filename": "demo_lecture.webm",
+      "video_path": "data/videos/demo_lecture.webm",
+      "audio_path": "data/audio/demo_lecture.wav",
+      "transcript_path": "data/transcripts/demo_sample_transcript.json",
+      "duration_seconds": 600.0,
+      "duration_formatted": "00:10:00",
+      "detected_language": "en",
+      "total_segments": 10,
+      "processing_status": "DEMONSTRATION_READY"
+    }
+  ]
+}

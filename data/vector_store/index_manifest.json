@@ -1,0 +1,8 @@
+{
+  "dataset": "demo_permissive_html",
+  "total_chunks": 5,
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "embedding_dimension": 384,
+  "backend": "faiss",
+  "normalized": true
+}
