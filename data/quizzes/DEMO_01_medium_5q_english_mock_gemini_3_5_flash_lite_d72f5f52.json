@@ -1,0 +1,98 @@
+{
+  "quiz_id": "QUIZ_DEMO_01_MEDIUM_5Q",
+  "lecture_id": "DEMO_01",
+  "lecture_title": "Your First HTML Website",
+  "difficulty": "Medium",
+  "num_questions": 5,
+  "language": "English",
+  "questions": [
+    {
+      "question": "What is the critical purpose of placing '<!DOCTYPE html>' on the very first line of an HTML document?",
+      "options": [
+        "It informs the browser engine to render the page in standard HTML5 mode rather than legacy quirks mode",
+        "It assigns an administrative password to the web directory",
+        "It loads the default browser stylesheet",
+        "It registers the DNS server hostname"
+      ],
+      "correct_index": 0,
+      "explanation": "The '<!DOCTYPE html>' directive signals modern HTML5 document parsing to avoid legacy quirks mode rendering.",
+      "topic": "HTML5 Doctype",
+      "timestamp_ref": "00:02:15",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0001"
+      ],
+      "id": 1
+    },
+    {
+      "question": "What primary architectural difference distinguishes the <head> element from the <body> element in HTML?",
+      "options": [
+        "The <head> contains page metadata and settings; the <body> contains all visual document content",
+        "The <head> is rendered on mobile only; the <body> renders on desktop",
+        "The <head> contains graphical media; the <body> contains typography",
+        "There is no distinction; they are interchangeable"
+      ],
+      "correct_index": 0,
+      "explanation": "The <head> element hosts invisible metadata, character sets, and assets; <body> encloses visible layout elements.",
+      "topic": "Document Structure",
+      "timestamp_ref": "00:04:10",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0002"
+      ],
+      "id": 2
+    },
+    {
+      "question": "Which principle represents semantic best practice regarding heading hierarchy (<h1> through <h6>)?",
+      "options": [
+        "Use exactly one <h1> per page to define the primary subject for users and search engine crawlers",
+        "The <h6> tag displays the largest typography",
+        "Heading tags carry no semantic significance and serve purely as visual styling shortcuts",
+        "Every paragraph requires a preceding <h1>"
+      ],
+      "correct_index": 0,
+      "explanation": "An HTML document must maintain a logical outline; exactly one <h1> designates the primary topic of the page.",
+      "topic": "Heading Hierarchy",
+      "timestamp_ref": "00:08:30",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0003"
+      ],
+      "id": 3
+    },
+    {
+      "question": "Which attribute on an anchor tag (<a>) opens the destination URL in a new browser tab?",
+      "options": [
+        "target='_blank'",
+        "open='tab'",
+        "window='new'",
+        "href='new_window'"
+      ],
+      "correct_index": 0,
+      "explanation": "Setting target='_blank' instructs the browser to open the linked resource in a new browsing context.",
+      "topic": "Anchor Target Attribute",
+      "timestamp_ref": "00:12:15",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0004"
+      ],
+      "id": 4
+    },
+    {
+      "question": "What is the primary role of the 'alt' attribute on the <img> element?",
+      "options": [
+        "It provides alternative text for accessibility screen readers and fallback text if image loading fails",
+        "It sets the image border radius dynamically",
+        "It defines the high-DPI retina multiplier",
+        "It forces automatic image caching on proxy servers"
+      ],
+      "correct_index": 0,
+      "explanation": "The 'alt' attribute provides descriptive alternative text indispensable for screen reader users and SEO indexers.",
+      "topic": "Image Alt Accessibility",
+      "timestamp_ref": "00:15:20",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0005"
+      ],
+      "id": 5
+    }
+  ],
+  "generated_at": 1795680261.8956344,
+  "is_mock": true,
+  "is_cached": false
+}

@@ -44,8 +44,8 @@ st.markdown("""
 <style>
     /* Global Container Adjustments */
     .block-container {
-        padding-top: 1.5rem;
-        padding-bottom: 2rem;
+        padding-top: 1.15rem;
+        padding-bottom: 1.5rem;
         padding-left: 2rem;
         padding-right: 2rem;
     }
@@ -57,9 +57,9 @@ st.markdown("""
         gap: 1rem;
         background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
         color: white;
-        padding: 1.25rem 1.75rem;
+        padding: 0.9rem 1.5rem;
         border-radius: 12px;
-        margin-bottom: 1.25rem;
+        margin-bottom: 0.75rem;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
     .brand-title {
@@ -88,8 +88,8 @@ st.markdown("""
         background-color: #F8FAFC;
         border: 1px solid #E2E8F0;
         border-radius: 10px;
-        padding: 1rem 1.25rem;
-        margin-bottom: 1rem;
+        padding: 0.65rem 1.15rem;
+        margin-bottom: 0.65rem;
     }
     .lecture-card h4 {
         margin: 0 0 0.4rem 0;
@@ -102,6 +102,22 @@ st.markdown("""
         color: #64748B;
         font-size: 0.85rem;
         font-weight: 500;
+    }
+
+    /* Video Player Responsive Container & Sizing (Max 900px, 16:9 ratio, centered) */
+    .stVideo {
+        max-width: 900px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 0.4rem !important;
+    }
+    .stVideo video {
+        border-radius: 8px;
+        aspect-ratio: 16 / 9;
+        width: 100% !important;
+        height: auto !important;
     }
     
     /* Citation Cards */
@@ -475,38 +491,41 @@ def main():
     """, unsafe_allow_html=True)
 
     # Render Local WebM / MP4 Video Player with Native Seek Time
-    sample_video_path = config.VIDEOS_DIR / "demo_sample_lecture.mp4"
-    if full_video_path.exists():
-        seek_sec = int(st.session_state.get("seek_time", 0))
-        st.video(
-            str(full_video_path),
-            format="video/webm" if str(full_video_path).endswith(".webm") else "video/mp4",
-            start_time=seek_sec
-        )
-    elif sample_video_path.exists():
-        seek_sec = int(st.session_state.get("seek_time", 0))
-        st.video(
-            str(sample_video_path),
-            format="video/mp4",
-            start_time=seek_sec
-        )
-        st.caption("🎬 *Interactive Demonstration Video: Clickable timestamp seek buttons (`🎯 Seek to [MM:SS]`) dynamically cue this player.*")
-    else:
-        seek_sec = int(st.session_state.get("seek_time", 0))
-        seek_m = int(seek_sec // 60)
-        seek_s = int(seek_sec % 60)
-        st.markdown(f"""
-        <div style="background:#1E293B; border:1px solid #334155; border-radius:8px; padding:1.25rem; text-align:center; color:#F8FAFC; margin-bottom:1rem;">
-            <div style="font-size:1.8rem; margin-bottom:0.25rem;">🎬</div>
-            <strong style="font-size:1rem; color:#F8FAFC;">{current_lec.get('lecture_title', '').split('|')[0].strip()}</strong>
-            <p style="font-size:0.8rem; color:#94A3B8; margin:0.35rem 0 0.75rem 0;">
-                Full lecture video excluded from repository for lightweight cloud deployment.
-            </p>
-            <div style="display:inline-block; background:#0F172A; border:1px solid #38BDF8; padding:0.35rem 0.85rem; border-radius:16px; font-size:0.8rem; color:#38BDF8;">
-                ⏱️ Active Timestamp Position: <strong>{seek_m:02d}:{seek_s:02d}</strong> ({seek_sec}s)
+    # Centered, compact container (approx. 68% desktop width, max 900px, 16:9 ratio)
+    v_col_left, v_col_center, v_col_right = st.columns([1.6, 6.8, 1.6])
+    with v_col_center:
+        sample_video_path = config.VIDEOS_DIR / "demo_sample_lecture.mp4"
+        if full_video_path.exists():
+            seek_sec = int(st.session_state.get("seek_time", 0))
+            st.video(
+                str(full_video_path),
+                format="video/webm" if str(full_video_path).endswith(".webm") else "video/mp4",
+                start_time=seek_sec
+            )
+        elif sample_video_path.exists():
+            seek_sec = int(st.session_state.get("seek_time", 0))
+            st.video(
+                str(sample_video_path),
+                format="video/mp4",
+                start_time=seek_sec
+            )
+            st.caption("🎬 *Interactive Demonstration Video: Clickable timestamp seek buttons (`🎯 Seek to [MM:SS]`) dynamically cue this player.*")
+        else:
+            seek_sec = int(st.session_state.get("seek_time", 0))
+            seek_m = int(seek_sec // 60)
+            seek_s = int(seek_sec % 60)
+            st.markdown(f"""
+            <div style="background:#1E293B; border:1px solid #334155; border-radius:8px; padding:1.25rem; text-align:center; color:#F8FAFC; margin-bottom:0.75rem;">
+                <div style="font-size:1.8rem; margin-bottom:0.25rem;">🎬</div>
+                <strong style="font-size:1rem; color:#F8FAFC;">{current_lec.get('lecture_title', '').split('|')[0].strip()}</strong>
+                <p style="font-size:0.8rem; color:#94A3B8; margin:0.35rem 0 0.75rem 0;">
+                    Full lecture video excluded from repository for lightweight cloud deployment.
+                </p>
+                <div style="display:inline-block; background:#0F172A; border:1px solid #38BDF8; padding:0.35rem 0.85rem; border-radius:16px; font-size:0.8rem; color:#38BDF8;">
+                    ⏱️ Active Timestamp Position: <strong>{seek_m:02d}:{seek_s:02d}</strong> ({seek_sec}s)
+                </div>
             </div>
-        </div>
-        """, unsafe_allow_html=True)
+            """, unsafe_allow_html=True)
 
     # -------------------------------------------------------------------------
     # D. Feature Tabs: Ask AI, Smart Notes, Practice Quiz
