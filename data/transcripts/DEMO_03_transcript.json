@@ -1,0 +1,120 @@
+{
+  "lecture_id": "DEMO_03",
+  "lecture_title": "SEO & Core Web Vitals",
+  "total_duration": 252.0,
+  "total_segments": 14,
+  "segments": [
+    {
+      "segment_id": "DEMO_03_SEG_0001",
+      "start": 0.0,
+      "end": 18.0,
+      "start_timestamp": "00:00:00",
+      "end_timestamp": "00:18:00",
+      "text": "Welcome to Lecture 3: SEO and Core Web Vitals. Search Engine Optimization is the science of improving your website's visibility on search engines like Google. Crawlers parse your raw HTML structure to determine page relevance and quality."
+    },
+    {
+      "segment_id": "DEMO_03_SEG_0002",
+      "start": 18.0,
+      "end": 36.0,
+      "start_timestamp": "00:18:00",
+      "end_timestamp": "00:36:00",
+      "text": "The title tag is one of the most critical on-page SEO elements. It forms the clickable blue headline in Google search results and should be kept between 50 and 60 characters with your main keyword placed near the beginning."
+    },
+    {
+      "segment_id": "DEMO_03_SEG_0003",
+      "start": 36.0,
+      "end": 54.0,
+      "start_timestamp": "00:36:00",
+      "end_timestamp": "00:54:00",
+      "text": "The meta description provides the summary snippet displayed beneath your page title in search results. An engaging, accurate description between 140 and 160 characters boosts your click-through rate from prospective students."
+    },
+    {
+      "segment_id": "DEMO_03_SEG_0004",
+      "start": 54.0,
+      "end": 72.0,
+      "start_timestamp": "00:54:00",
+      "end_timestamp": "01:12:00",
+      "text": "Google indexes websites based on their mobile version. Omitting the viewport meta tag causes mobile devices to zoom out awkwardly. Adding width equals device-width and initial-scale 1.0 is mandatory for all responsive websites."
+    },
+    {
+      "segment_id": "DEMO_03_SEG_0005",
+      "start": 72.0,
+      "end": 90.0,
+      "start_timestamp": "01:12:00",
+      "end_timestamp": "01:30:00",
+      "text": "Semantic HTML tags like header, nav, main, article, and footer describe their exact purpose to search engines. Replacing generic div containers with semantic elements helps search engines distinguish primary article content from navigation bars."
+    },
+    {
+      "segment_id": "DEMO_03_SEG_0006",
+      "start": 90.0,
+      "end": 108.0,
+      "start_timestamp": "01:30:00",
+      "end_timestamp": "01:48:00",
+      "text": "Search engine crawlers rely on the alt attribute to understand image context. Write concise, descriptive alternative text that genuinely explains the visual content, and use modern lightweight formats like WebP to accelerate loading."
+    },
+    {
+      "segment_id": "DEMO_03_SEG_0007",
+      "start": 108.0,
+      "end": 126.0,
+      "start_timestamp": "01:48:00",
+      "end_timestamp": "02:06:00",
+      "text": "Core Web Vitals are official Google ranking signals that measure real-world user experience. They evaluate three key performance aspects: Largest Contentful Paint for loading, Interaction to Next Paint for responsiveness, and Cumulative Layout Shift for visual stability."
+    },
+    {
+      "segment_id": "DEMO_03_SEG_0008",
+      "start": 126.0,
+      "end": 144.0,
+      "start_timestamp": "02:06:00",
+      "end_timestamp": "02:24:00",
+      "text": "Largest Contentful Paint measures the time it takes to render the largest visible content element, such as a hero banner or main heading. Google classifies an LCP of under 2.5 seconds as good. You can optimize LCP by preloading and compressing hero media."
+    },
+    {
+      "segment_id": "DEMO_03_SEG_0009",
+      "start": 144.0,
+      "end": 162.0,
+      "start_timestamp": "02:24:00",
+      "end_timestamp": "02:42:00",
+      "text": "Interaction to Next Paint measures how quickly a webpage responds when a student clicks a button or types into an input field. Google requires an INP of under 200 milliseconds. Keep your JavaScript lightweight to prevent freezing the main thread."
+    },
+    {
+      "segment_id": "DEMO_03_SEG_0010",
+      "start": 162.0,
+      "end": 180.0,
+      "start_timestamp": "02:42:00",
+      "end_timestamp": "03:00:00",
+      "text": "Cumulative Layout Shift measures annoying visual jumps that happen when images or ads load unexpectedly and push text down. An ideal CLS score is under 0.1. Always specify explicit width and height dimensions on media elements to reserve layout space."
+    },
+    {
+      "segment_id": "DEMO_03_SEG_0011",
+      "start": 180.0,
+      "end": 198.0,
+      "start_timestamp": "03:00:00",
+      "end_timestamp": "03:18:00",
+      "text": "Google Chrome includes Lighthouse, an automated auditing tool in Developer Tools. Running a Lighthouse audit generates actionable scores for Performance, SEO, and Accessibility, highlighting uncompressed assets and missing meta tags."
+    },
+    {
+      "segment_id": "DEMO_03_SEG_0012",
+      "start": 198.0,
+      "end": 216.0,
+      "start_timestamp": "03:18:00",
+      "end_timestamp": "03:36:00",
+      "text": "To boost performance, convert heavy images to WebP, add loading lazy to images below the fold, and use the defer attribute on external JavaScript scripts so they don't block the browser from rendering HTML content."
+    },
+    {
+      "segment_id": "DEMO_03_SEG_0013",
+      "start": 216.0,
+      "end": 234.0,
+      "start_timestamp": "03:36:00",
+      "end_timestamp": "03:54:00",
+      "text": "Beware of outdated SEO myths: cramming keywords into text will penalize your site, and the meta keywords tag has been ignored for years. Modern SEO rewards fast, mobile-friendly websites with clean semantic HTML and genuine educational value."
+    },
+    {
+      "segment_id": "DEMO_03_SEG_0014",
+      "start": 234.0,
+      "end": 252.0,
+      "start_timestamp": "03:54:00",
+      "end_timestamp": "04:12:00",
+      "text": "Congratulations on completing Web Development Fundamentals. You've mastered HTML document structure, native video and audio integration, and technical SEO with Core Web Vitals. You are now fully equipped to explore LearnMate AI's notes and quizzes!"
+    }
+  ]
+}

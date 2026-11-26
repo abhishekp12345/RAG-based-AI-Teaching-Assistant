@@ -215,35 +215,27 @@ def load_lecture_manifest() -> List[Dict[str, Any]]:
     return [
         {
             "lecture_id": "DEMO_01",
-            "lecture_title": "Introduction to HTML & Web Development Fundamentals | Demo Tutorial",
+            "lecture_title": "Your First HTML Website",
             "tutorial_number": 1,
-            "duration_formatted": "00:01:00",
-            "duration_seconds": 60.0,
-            "video_filename": "demo_sample_lecture.mp4"
+            "duration_formatted": "00:04:12",
+            "duration_seconds": 252.0,
+            "video_filename": "lecture_01_html_fundamentals.mp4"
         },
         {
-            "lecture_id": "LEC_03",
-            "lecture_title": "Your First HTML Website | Sigma Web Development Course - Tutorial #2",
+            "lecture_id": "DEMO_02",
+            "lecture_title": "Video, Audio & Media in HTML",
             "tutorial_number": 2,
-            "duration_formatted": "00:28:30",
-            "duration_seconds": 1710.37,
-            "video_filename": "Your First HTML Website ｜ Sigma Web Development Course - Tutorial #2 [kJEsTjH5mVg].webm"
+            "duration_formatted": "00:04:12",
+            "duration_seconds": 252.0,
+            "video_filename": "lecture_02_html_multimedia.mp4"
         },
         {
-            "lecture_id": "LEC_01",
-            "lecture_title": "SEO and Core Web Vitals in HTML | Sigma Web Development Course - Tutorial #6",
-            "tutorial_number": 6,
-            "duration_formatted": "00:13:15",
-            "duration_seconds": 795.17,
-            "video_filename": "SEO and Core Web Vitals in HTML ｜ Sigma Web Development Course - Tutorial #6 [CyRlWlaJnTY].webm"
-        },
-        {
-            "lecture_id": "LEC_02",
-            "lecture_title": "Video, Audio & Media in HTML | Sigma Web Development Course - Tutorial #10",
-            "tutorial_number": 10,
-            "duration_formatted": "00:14:47",
-            "duration_seconds": 887.09,
-            "video_filename": "Video, Audio & Media in HTML ｜ Sigma Web Development Course - Tutorial #10 [XZwBNDGuWGU].webm"
+            "lecture_id": "DEMO_03",
+            "lecture_title": "SEO & Core Web Vitals",
+            "tutorial_number": 3,
+            "duration_formatted": "00:04:12",
+            "duration_seconds": 252.0,
+            "video_filename": "lecture_03_seo_core_web_vitals.mp4"
         }
     ]
 
@@ -307,7 +299,17 @@ SUGGESTED_QUESTIONS = {
     "DEMO_01": [
         "What is HTML and what does <!DOCTYPE html> mean?",
         "What are the main sections inside the <html> tag?",
-        "What are Core Web Vitals and what does LCP measure?"
+        "How do I create a paragraph and heading in HTML?"
+    ],
+    "DEMO_02": [
+        "How do I embed a video using the <video> tag in HTML?",
+        "Why is muted required for video autoplay in modern browsers?",
+        "What is the purpose of the <iframe> tag for embedding media?"
+    ],
+    "DEMO_03": [
+        "What is SEO and why is the description meta tag important?",
+        "What are Google Core Web Vitals and what does LCP measure?",
+        "How does Google Lighthouse help audit website performance?"
     ],
     "LEC_03": [
         "How do I create my first HTML website?",
@@ -357,7 +359,7 @@ def main():
     # -------------------------------------------------------------------------
     with st.sidebar:
         st.markdown("### 📚 Course Navigation")
-        st.caption("**HTML & Web Development Fundamentals** (Interactive Demonstration)")
+        st.caption("**Web Development Fundamentals** (3-Lecture Course & Interactive Video Demonstration)")
 
         # Lecture Selection Dropdown
         lec_options = [lec["lecture_id"] for lec in lectures]

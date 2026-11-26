@@ -34,8 +34,11 @@ data/audio/*.m4a
 *.zip
 *.tar.gz
 *.7z
-# Allow lightweight synthetic demonstration video
+# Allow original course demonstration videos (< 6 MB each)
 !data/videos/demo_sample_lecture.mp4
+!data/videos/lecture_01_html_fundamentals.mp4
+!data/videos/lecture_02_html_multimedia.mp4
+!data/videos/lecture_03_seo_core_web_vitals.mp4
 
 # Third-Party Copyrighted Educational Material (CodeWithHarry Sigma Course)
 data/transcripts/SEO*

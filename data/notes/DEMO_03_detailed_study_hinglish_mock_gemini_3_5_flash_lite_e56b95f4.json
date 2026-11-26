@@ -1,0 +1,116 @@
+{
+  "lecture_id": "DEMO_03",
+  "lecture_title": "SEO & Core Web Vitals",
+  "notes_style": "detailed_study",
+  "language": "Hinglish",
+  "executive_summary": "Is lecture mein humne seekha ki Search Engine Optimization (SEO) kya hota hai aur websites ko search engines par rank karne ke liye HTML meta tags, viewport settings, aur image alt attributes kaise configure karte hain. Humne Chrome DevTools ke Google Lighthouse tool se website audit karna aur Core Web Vitals (LCP, FID, CLS) optimize karna bhi seekha.",
+  "learning_objectives": [
+    "SEO fundamentals aur on-page meta tag strategies samajhna",
+    "<meta> description aur mobile viewport tags implement karna",
+    "Chrome DevTools Lighthouse panel se performance audit run karna",
+    "Core Web Vitals metrics (LCP, FID, CLS) ke thresholds optimize karna"
+  ],
+  "sections": [
+    {
+      "heading": "1. SEO Fundamentals & Essential Meta Tags",
+      "content": "SEO ka goal search engines jaise Google par organic traffic lana hota hai. HTML ke <head> section mein <meta name='description'> Google search snippet decide karta hai. Mobile devices ke liye responsive viewport meta tag zaroori hota hai.",
+      "code_snippets": [
+        "<meta name=\"description\" content=\"Master modern HTML, SEO, and web development with Sigma Batch.\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0001",
+        "DEMO_03_CHK_0002"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_03_CHK_0001",
+          "timestamp": "00:00:00",
+          "tutorial_number": 3
+        },
+        {
+          "chunk_id": "DEMO_03_CHK_0002",
+          "timestamp": "00:18:00",
+          "tutorial_number": 3
+        }
+      ]
+    },
+    {
+      "heading": "2. Google Lighthouse Audit & Performance Analysis",
+      "content": "Chrome DevTools ke andar Lighthouse tab se hum 4 categories check karte hain: Performance, Accessibility, Best Practices, aur SEO. Lighthouse audit se heavy images aur slow resources ka pata lagta hai.",
+      "code_snippets": [
+        "<!-- Chrome DevTools: F12 -> Lighthouse -> Analyze page load -->\n<link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\">"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0003",
+        "DEMO_03_CHK_0004"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_03_CHK_0003",
+          "timestamp": "00:36:00",
+          "tutorial_number": 3
+        },
+        {
+          "chunk_id": "DEMO_03_CHK_0004",
+          "timestamp": "00:54:00",
+          "tutorial_number": 3
+        }
+      ]
+    },
+    {
+      "heading": "3. Core Web Vitals (LCP, FID, CLS)",
+      "content": "Core Web Vitals user experience ke 3 core dimensions measure karte hain:\n- LCP (Largest Contentful Paint): Largest visible content load hone ka time (< 2.5s is good).\n- FID (First Input Delay): User ke first click/tap par responsiveness (< 100ms is good).\n- CLS (Cumulative Layout Shift): Content ka sudden unexpected shift (< 0.1 is good).",
+      "code_snippets": [
+        "<!-- Prevent CLS by reserving aspect-ratio or dimensions -->\n<img src=\"hero.jpg\" alt=\"Tutorial Hero\" width=\"800\" height=\"450\" loading=\"lazy\">"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0005",
+        "DEMO_03_CHK_0006"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_03_CHK_0005",
+          "timestamp": "01:12:00",
+          "tutorial_number": 3
+        },
+        {
+          "chunk_id": "DEMO_03_CHK_0006",
+          "timestamp": "01:30:00",
+          "tutorial_number": 3
+        }
+      ]
+    }
+  ],
+  "definitions_and_terms": [
+    {
+      "term": "SEO",
+      "definition": "Search Engine Optimization: Google par website rank karane ki technique.",
+      "timestamp_ref": "00:00:15"
+    },
+    {
+      "term": "LCP",
+      "definition": "Largest Contentful Paint: Page ka main hero content render hone ka time.",
+      "timestamp_ref": "00:05:40"
+    },
+    {
+      "term": "CLS",
+      "definition": "Cumulative Layout Shift: Loading ke dauran visual stability ka score.",
+      "timestamp_ref": "00:08:12"
+    }
+  ],
+  "common_pitfalls": [
+    "Viewport meta tag bhool jana jisse mobile screen par layout shrink ho jata hai.",
+    "Images ke explicit width/height dimensions omit karna jisse CLS score drop hota hai.",
+    "Repetitive keyword stuffing karna jo Google algorithms detect karke penalize karte hain."
+  ],
+  "revision_checklist": [
+    "Head tag mein meta description added hai?",
+    "Responsive viewport meta tag correctly defined hai?",
+    "Sabhi images par meaningful alt text diya hai?",
+    "Lighthouse SEO score 90+ achieve hua hai?",
+    "LCP timing 2.5s ke under optimize hui hai?"
+  ],
+  "generated_at": 1795674867.8697996,
+  "is_mock": true,
+  "is_cached": false
+}

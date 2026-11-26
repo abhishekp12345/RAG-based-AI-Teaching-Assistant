@@ -221,7 +221,7 @@ class QuizGenerator:
         cids = [c["chunk_id"] for c in chunks]
 
         # Bank of 10 grounded questions per lecture
-        if lecture_id == "LEC_01":  # Tutorial #6: SEO & Core Web Vitals
+        if lecture_id in ("LEC_01", "DEMO_03"):  # SEO & Core Web Vitals
             if language == "Hindi":
                 bank = [
                     {
@@ -592,7 +592,7 @@ class QuizGenerator:
                     }
                 ]
 
-        elif lecture_id == "LEC_02":  # Tutorial #10: Video, Audio & Media in HTML
+        elif lecture_id in ("LEC_02", "DEMO_02"):  # Video, Audio & Media in HTML
             if language == "Hindi":
                 bank = [
                     {

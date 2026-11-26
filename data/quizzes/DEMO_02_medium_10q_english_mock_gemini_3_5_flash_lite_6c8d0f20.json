@@ -1,0 +1,183 @@
+{
+  "quiz_id": "QUIZ_DEMO_02_MEDIUM_10Q",
+  "lecture_id": "DEMO_02",
+  "lecture_title": "Video, Audio & Media in HTML",
+  "difficulty": "Medium",
+  "num_questions": 10,
+  "language": "English",
+  "questions": [
+    {
+      "question": "What requirement must be met for modern web browsers to permit automated video playback using 'autoplay'?",
+      "options": [
+        "The 'muted' attribute must also be specified on the <video> tag",
+        "The 'controls' attribute must be omitted entirely",
+        "The video file must be encoded exclusively in WebM format",
+        "The 'loop' attribute must be enabled"
+      ],
+      "correct_index": 0,
+      "explanation": "Browser autonomy policies strictly enforce that unmuted video cannot autoplay to avoid startling users with unsolicited sound.",
+      "topic": "Autoplay & Audio Policies",
+      "timestamp_ref": "00:03:45",
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0001"
+      ],
+      "id": 1
+    },
+    {
+      "question": "What is the function of the boolean 'controls' attribute on the HTML5 <video> element?",
+      "options": [
+        "It renders browser playback controls including play/pause, seek track, and volume slider",
+        "It enables hardware acceleration on user GPUs",
+        "It prevents users from right-clicking to download the video",
+        "It forces the media player into a full-viewport modal"
+      ],
+      "correct_index": 0,
+      "explanation": "The 'controls' attribute directs the browser to present native user playback controls.",
+      "topic": "Video Controls",
+      "timestamp_ref": "00:02:10",
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0002"
+      ],
+      "id": 2
+    },
+    {
+      "question": "Which attribute on the <video> tag designates a thumbnail preview image prior to playback?",
+      "options": [
+        "thumbnail",
+        "preview",
+        "poster",
+        "cover"
+      ],
+      "correct_index": 2,
+      "explanation": "The 'poster' attribute specifies an image URL displayed until the user initiates video playback.",
+      "topic": "Video Poster Attribute",
+      "timestamp_ref": "00:04:50",
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0003"
+      ],
+      "id": 3
+    },
+    {
+      "question": "Why is it best practice to enclose multiple <source> elements within an <audio> or <video> tag?",
+      "options": [
+        "To play multiple media channels simultaneously",
+        "To provide fallback formats (e.g. MP4, WebM) across different browser codec implementations",
+        "To enhance video compression speed by 50%",
+        "To inject subtitles automatically into the media pipeline"
+      ],
+      "correct_index": 1,
+      "explanation": "Different browsers support distinct audio/video codecs; multiple sources offer robust compatibility fallbacks.",
+      "topic": "Media Source Fallbacks",
+      "timestamp_ref": "00:06:30",
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0004"
+      ],
+      "id": 4
+    },
+    {
+      "question": "Which HTML element is the standard mechanism to embed third-party media like YouTube or interactive maps?",
+      "options": [
+        "<embed-video>",
+        "<iframe>",
+        "<plugin>",
+        "<portal>"
+      ],
+      "correct_index": 1,
+      "explanation": "The <iframe> (Inline Frame) encloses an external browsing context to embed videos, maps, and widgets.",
+      "topic": "iframe Media Embeds",
+      "timestamp_ref": "00:09:40",
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0005"
+      ],
+      "id": 5
+    },
+    {
+      "question": "Which attribute causes an HTML5 media element to automatically replay once it concludes?",
+      "options": [
+        "repeat",
+        "replay",
+        "loop",
+        "continuous"
+      ],
+      "correct_index": 2,
+      "explanation": "The 'loop' boolean attribute instructs the browser to seamlessly restart media playback upon reaching the end.",
+      "topic": "Loop Playback",
+      "timestamp_ref": "00:05:15",
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0003"
+      ],
+      "id": 6
+    },
+    {
+      "question": "What capability does the 'allowfullscreen' attribute grant to an embedded <iframe> video player?",
+      "options": [
+        "It authorizes the embedded player to expand across the user's entire monitor display",
+        "It forces the outer website into kiosk mode",
+        "It hides browser navigation chrome permanently",
+        "It locks screen orientation to landscape"
+      ],
+      "correct_index": 0,
+      "explanation": "The 'allowfullscreen' attribute explicitly delegates fullscreen API capabilities to the nested frame context.",
+      "topic": "iframe Permissions",
+      "timestamp_ref": "00:11:05",
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0005"
+      ],
+      "id": 7
+    },
+    {
+      "question": "What is the standard, valid HTML5 syntax for embedding native audio playback?",
+      "options": [
+        "<audio controls><source src='lecture.mp3' type='audio/mpeg'></audio>",
+        "<music src='lecture.mp3' controls='true'>",
+        "<sound src='lecture.mp3' play controls>",
+        "<audio file='lecture.mp3' auto>"
+      ],
+      "correct_index": 0,
+      "explanation": "<audio controls> containing nested <source> elements is the standard semantic implementation.",
+      "topic": "Audio Syntax",
+      "timestamp_ref": "00:07:15",
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0004"
+      ],
+      "id": 8
+    },
+    {
+      "question": "What occurs if developer code specifies a <video> element without 'controls' and without 'autoplay'?",
+      "options": [
+        "The audio plays in the background while video is hidden",
+        "The video renders as an inert still image that users cannot trigger or navigate",
+        "The browser triggers a console fatal exception",
+        "The video defaults to launching in an external desktop application"
+      ],
+      "correct_index": 1,
+      "explanation": "Without controls or script triggers, the user has no interface to initiate playback, rendering the element inert.",
+      "topic": "Media Error Handling",
+      "timestamp_ref": "00:08:20",
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0002"
+      ],
+      "id": 9
+    },
+    {
+      "question": "Why is it strongly recommended to explicitly define 'width' and 'height' attributes on <video> tags?",
+      "options": [
+        "To reserve layout aspect ratio in advance, preventing Cumulative Layout Shift (CLS)",
+        "To reduce server streaming bandwidth by 40%",
+        "To auto-adjust playback volume based on screen area",
+        "To force high-definition 1080p stream resolution"
+      ],
+      "correct_index": 0,
+      "explanation": "Explicit dimensions allow the browser to reserve the required box model area before the video headers arrive.",
+      "topic": "Player Dimensions",
+      "timestamp_ref": "00:03:00",
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0002"
+      ],
+      "id": 10
+    }
+  ],
+  "generated_at": 1795674867.8844066,
+  "is_mock": true,
+  "is_cached": false
+}

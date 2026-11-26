@@ -1,0 +1,120 @@
+{
+  "lecture_id": "DEMO_01",
+  "lecture_title": "Your First HTML Website",
+  "total_duration": 252.0,
+  "total_segments": 14,
+  "segments": [
+    {
+      "segment_id": "DEMO_01_SEG_0001",
+      "start": 0.0,
+      "end": 18.0,
+      "start_timestamp": "00:00:00",
+      "end_timestamp": "00:18:00",
+      "text": "Welcome to Web Development Fundamentals. Every website is built using three foundational languages: HTML for structure, CSS for presentation and styling, and JavaScript for dynamic interactivity. HTML forms the essential skeleton of every web page."
+    },
+    {
+      "segment_id": "DEMO_01_SEG_0002",
+      "start": 18.0,
+      "end": 36.0,
+      "start_timestamp": "00:18:00",
+      "end_timestamp": "00:36:00",
+      "text": "Every webpage begins with the document type declaration, DOCTYPE html. This declaration informs the browser that the page adheres to modern HTML5 standards, ensuring consistent and bug-free rendering across all browsers."
+    },
+    {
+      "segment_id": "DEMO_01_SEG_0003",
+      "start": 36.0,
+      "end": 54.0,
+      "start_timestamp": "00:36:00",
+      "end_timestamp": "00:54:00",
+      "text": "Inside the root html element, documents are cleanly divided into two primary sections: the head and the body. The head stores metadata for browsers and search engines, while the body holds all visible text, images, and user interface elements."
+    },
+    {
+      "segment_id": "DEMO_01_SEG_0004",
+      "start": 54.0,
+      "end": 72.0,
+      "start_timestamp": "00:54:00",
+      "end_timestamp": "01:12:00",
+      "text": "Inside the head tag, we declare metadata like character set UTF-8, which supports global alphabets and emojis. We also set the title tag, which controls the tab text in browser windows and serves as a major ranking factor in Google search results."
+    },
+    {
+      "segment_id": "DEMO_01_SEG_0005",
+      "start": 72.0,
+      "end": 90.0,
+      "start_timestamp": "01:12:00",
+      "end_timestamp": "01:30:00",
+      "text": "HTML markup is composed of tags, elements, and attributes. Most elements have an opening tag, inner text, and a closing tag. Opening tags can hold attributes, which provide extra configuration like identifiers or styling classes."
+    },
+    {
+      "segment_id": "DEMO_01_SEG_0006",
+      "start": 90.0,
+      "end": 108.0,
+      "start_timestamp": "01:30:00",
+      "end_timestamp": "01:48:00",
+      "text": "HTML provides six levels of headings from h1 to h6. The h1 tag represents the main subject of your page and should be used only once per document. Maintaining a clean heading hierarchy is essential for both search engine rankings and screen reader accessibility."
+    },
+    {
+      "segment_id": "DEMO_01_SEG_0007",
+      "start": 108.0,
+      "end": 126.0,
+      "start_timestamp": "01:48:00",
+      "end_timestamp": "02:06:00",
+      "text": "Paragraphs are written using the p tag, which creates readable block-level text blocks. To highlight important terms, we use semantic formatting tags like strong for strong importance and em for vocal emphasis."
+    },
+    {
+      "segment_id": "DEMO_01_SEG_0008",
+      "start": 126.0,
+      "end": 144.0,
+      "start_timestamp": "02:06:00",
+      "end_timestamp": "02:24:00",
+      "text": "Hyperlinks connect the World Wide Web. We create links using the anchor tag with the href attribute specifying the destination address. Setting target equals blank opens links in new tabs, and adding rel noopener protects security."
+    },
+    {
+      "segment_id": "DEMO_01_SEG_0009",
+      "start": 144.0,
+      "end": 162.0,
+      "start_timestamp": "02:24:00",
+      "end_timestamp": "02:42:00",
+      "text": "Images bring web pages to life using the self-closing img tag. You must provide the src attribute pointing to the image file, and an alt attribute describing the image for screen readers and search engines when images cannot load."
+    },
+    {
+      "segment_id": "DEMO_01_SEG_0010",
+      "start": 162.0,
+      "end": 180.0,
+      "start_timestamp": "02:42:00",
+      "end_timestamp": "03:00:00",
+      "text": "Lists organize related information neatly. We use ul for bulleted unordered lists and ol for numbered sequential steps. Each item inside the list is wrapped in an li tag."
+    },
+    {
+      "segment_id": "DEMO_01_SEG_0011",
+      "start": 180.0,
+      "end": 198.0,
+      "start_timestamp": "03:00:00",
+      "end_timestamp": "03:18:00",
+      "text": "Now we assemble everything into a complete webpage. Combine the doctype, head, body, headings, and paragraphs, and save the file with a dot html extension. You can double-click it to preview your website instantly in any web browser."
+    },
+    {
+      "segment_id": "DEMO_01_SEG_0012",
+      "start": 198.0,
+      "end": 216.0,
+      "start_timestamp": "03:18:00",
+      "end_timestamp": "03:36:00",
+      "text": "Be mindful of common beginner mistakes: always include the doctype declaration, close every opened element properly, never omit the alt attribute on images, and avoid using multiple h1 headings on the same page."
+    },
+    {
+      "segment_id": "DEMO_01_SEG_0013",
+      "start": 216.0,
+      "end": 234.0,
+      "start_timestamp": "03:36:00",
+      "end_timestamp": "03:54:00",
+      "text": "Every modern browser includes developer tools. Right-click any webpage and choose Inspect to explore the live Document Object Model. You can edit text in real time, inspect attributes, and diagnose broken image links."
+    },
+    {
+      "segment_id": "DEMO_01_SEG_0014",
+      "start": 234.0,
+      "end": 252.0,
+      "start_timestamp": "03:54:00",
+      "end_timestamp": "04:12:00",
+      "text": "To summarize Lecture 1: HTML provides the semantic skeleton of every webpage. Always maintain clean separation of head and body, use exactly one h1 per page, provide alt text on images, and inspect your code with developer tools."
+    }
+  ]
+}

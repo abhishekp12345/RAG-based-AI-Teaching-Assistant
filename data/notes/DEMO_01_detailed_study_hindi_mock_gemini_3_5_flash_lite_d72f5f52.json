@@ -1,0 +1,115 @@
+{
+  "lecture_id": "DEMO_01",
+  "lecture_title": "Your First HTML Website",
+  "notes_style": "detailed_study",
+  "language": "Hindi",
+  "executive_summary": "यह लेक्चर वेब डेवलपमेंट की शुरुआत और पहली HTML वेबसाइट बनाने पर केंद्रित है। इसमें HTML की मूल संरचना (<!DOCTYPE html>, <html>, <head>, <body>), VS Code एडिटर का सेटअप, Emmet शॉर्टकट (!), हेडिंग टैग्स (<h1> से <h6>), पैराग्राफ (<p>), लिंक्स (<a>), और इमेजेस (<img>) का व्यावहारिक अभ्यास कराया गया है।",
+  "learning_objectives": [
+    "HTML डॉक्यूमेंट के बुनियादी ढांचे (Doctype, head, body) को समझना",
+    "VS Code में Emmet एब्रिविएशन (!) द्वारा बॉयलरप्लेट जनरेट करना",
+    "हेडिंग पदानुक्रम (<h1> - <h6>) और पैराग्राफ्स (<p>) का सही प्रयोग करना",
+    "हाइपरलिंक (<a>) और इमेजेस (<img>) को सही पाथ और एट्रिब्यूट्स के साथ जोड़ना"
+  ],
+  "sections": [
+    {
+      "heading": "1. HTML डॉक्यूमेंट कंकाल और बॉयलरप्लेट",
+      "content": "प्रत्येक आधुनिक HTML5 पेज <!DOCTYPE html> से शुरू होता है जो ब्राउज़र को HTML5 मोड में रेंडर करने का निर्देश देता है। <html> रूट एलिमेंट है, <head> में मेटाडेटा और टाइटल रहता है, और <body> में दृश्यमान सामग्री होती है।",
+      "code_snippets": [
+        "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>My First Website</title>\n</head>\n<body>\n  <h1>Welcome to Web Dev!</h1>\n</body>\n</html>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0001",
+        "DEMO_01_CHK_0002"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_01_CHK_0001",
+          "timestamp": "00:00:00",
+          "tutorial_number": 1
+        },
+        {
+          "chunk_id": "DEMO_01_CHK_0002",
+          "timestamp": "00:18:00",
+          "tutorial_number": 1
+        }
+      ]
+    },
+    {
+      "heading": "2. टेक्स्ट और हेडिंग पदानुक्रम",
+      "content": "HTML में <h1> से <h6> तक 6 हेडिंग स्तर होते हैं। <h1> पेज का मुख्य शीर्षक होता है और प्रति पेज केवल एक होना चाहिए। साधारण टेक्स्ट के लिए पैराग्राफ टैग <p> का उपयोग किया जाता है।",
+      "code_snippets": [
+        "<h1>Main Course Heading</h1>\n<h2>Chapter 1: Foundations</h2>\n<p>This is a paragraph explaining the core concepts of HTML.</p>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0003",
+        "DEMO_01_CHK_0004"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_01_CHK_0003",
+          "timestamp": "00:36:00",
+          "tutorial_number": 1
+        },
+        {
+          "chunk_id": "DEMO_01_CHK_0004",
+          "timestamp": "00:54:00",
+          "tutorial_number": 1
+        }
+      ]
+    },
+    {
+      "heading": "3. लिंक्स और इमेजेस (Anchor & Image Tags)",
+      "content": "<a> (Anchor) टैग href एट्रिब्यूट के साथ हाइपरलिंक बनाता है। नए टैब में खोलने के लिए target='_blank' का प्रयोग किया जाता है। <img> टैग एक सेल्फ-क्लोजिंग टैग है जिसमें src (सोर्स फाइल) और alt (वैकल्पिक टेक्स्ट) अनिवार्य हैं।",
+      "code_snippets": [
+        "<a href=\"https://pw.live\" target=\"_blank\" rel=\"noopener\">Visit PhysicsWallah</a>\n<img src=\"images/logo.png\" alt=\"PW Logo\" width=\"200\">"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0005",
+        "DEMO_01_CHK_0006"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_01_CHK_0005",
+          "timestamp": "01:12:00",
+          "tutorial_number": 1
+        },
+        {
+          "chunk_id": "DEMO_01_CHK_0006",
+          "timestamp": "01:30:00",
+          "tutorial_number": 1
+        }
+      ]
+    }
+  ],
+  "definitions_and_terms": [
+    {
+      "term": "<!DOCTYPE html>",
+      "definition": "डॉक्यूमेंट टाइप डिक्लेरेशन जो HTML5 वर्जन निर्दिष्ट करता है।",
+      "timestamp_ref": "00:02:15"
+    },
+    {
+      "term": "<a> tag",
+      "definition": "एंकर टैग जिसका उपयोग एक पेज से दूसरे पेज को लिंक करने के लिए किया जाता है।",
+      "timestamp_ref": "00:11:30"
+    },
+    {
+      "term": "<img> tag",
+      "definition": "सेल्फ-क्लोजिंग इमेज टैग जो वेबपेज पर तस्वीरें प्रदर्शित करता है।",
+      "timestamp_ref": "00:15:20"
+    }
+  ],
+  "common_pitfalls": [
+    "एक ही पेज पर कई <h1> टैग्स का इस्तेमाल करना जो SEO के लिए नुकसानदेह है।",
+    "<img> टैग में alt एट्रिब्यूट छोड़ देना, जिससे दृष्टिबाधित छात्रों और स्क्रीन रीडर्स को परेशानी होती है।",
+    "रिलेटिव पाथ (relative path) में फाइल नेम या एक्सटेंशन गलत लिखना।"
+  ],
+  "revision_checklist": [
+    "क्या कोड के शीर्ष पर <!DOCTYPE html> मौजूद है?",
+    "क्या पेज पर केवल एक प्रमुख <h1> टैग है?",
+    "क्या सभी लिंक्स में वैध href लिंक दी गई है?",
+    "क्या सभी इमेजेस में वर्णनात्मक alt टेक्स्ट मौजूद है?"
+  ],
+  "generated_at": 1795674867.8186917,
+  "is_mock": true,
+  "is_cached": false
+}

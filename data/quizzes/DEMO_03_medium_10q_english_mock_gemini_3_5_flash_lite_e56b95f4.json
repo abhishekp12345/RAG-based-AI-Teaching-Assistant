@@ -1,0 +1,183 @@
+{
+  "quiz_id": "QUIZ_DEMO_03_MEDIUM_10Q",
+  "lecture_id": "DEMO_03",
+  "lecture_title": "SEO & Core Web Vitals",
+  "difficulty": "Medium",
+  "num_questions": 10,
+  "language": "English",
+  "questions": [
+    {
+      "question": "Which <meta> tag configuration is essential to ensure responsive rendering across mobile screens?",
+      "options": [
+        "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+        "<meta name='screen' content='device-width, initial-scale=1.0'>",
+        "<meta http-equiv='mobile-render' content='auto'>",
+        "<meta name='responsive' content='true'>"
+      ],
+      "correct_index": 0,
+      "explanation": "The viewport meta tag matches the virtual viewport to physical device width at 1:1 initial scale.",
+      "topic": "Responsive Viewport",
+      "timestamp_ref": "00:01:15",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0001"
+      ],
+      "id": 1
+    },
+    {
+      "question": "Which HTML tag supplies the summary snippet displayed beneath your page title on Google search results?",
+      "options": [
+        "<meta name='summary' content='...'>",
+        "<meta name='description' content='...'>",
+        "<meta name='snippet' content='...'>",
+        "<meta name='details' content='...'>"
+      ],
+      "correct_index": 1,
+      "explanation": "Search engines inspect <meta name='description'> to populate the organic search results snippet.",
+      "topic": "SEO Meta Tags",
+      "timestamp_ref": "00:02:40",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0002"
+      ],
+      "id": 2
+    },
+    {
+      "question": "What core performance dimension does Largest Contentful Paint (LCP) measure in Google Core Web Vitals?",
+      "options": [
+        "Time to First Byte (TTFB) from the hosting server",
+        "Render time of the largest visible content element in the viewport",
+        "Duration taken to parse inline JavaScript tags",
+        "Frequency of jarring DOM repositioning during scrolling"
+      ],
+      "correct_index": 1,
+      "explanation": "LCP benchmarks perceived loading speed by recording when the primary hero content finishes rendering.",
+      "topic": "LCP Performance",
+      "timestamp_ref": "00:05:40",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0003"
+      ],
+      "id": 3
+    },
+    {
+      "question": "What is the primary cause of poor Cumulative Layout Shift (CLS) on educational web pages?",
+      "options": [
+        "Images and dynamic media embedded without explicit width and height dimensions",
+        "Loading external CSS from a Content Delivery Network (CDN)",
+        "Using CSS Grid and Flexbox simultaneously",
+        "Omitting the charset meta tag in <head>"
+      ],
+      "correct_index": 0,
+      "explanation": "Images without explicit dimensions force browser reflows as assets load, causing jarring layout jumps.",
+      "topic": "CLS Visual Stability",
+      "timestamp_ref": "00:08:12",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0004"
+      ],
+      "id": 4
+    },
+    {
+      "question": "Which Chrome DevTools tool automates auditing for Performance, Accessibility, Best Practices, and SEO?",
+      "options": [
+        "Console",
+        "Network",
+        "Lighthouse",
+        "Application"
+      ],
+      "correct_index": 2,
+      "explanation": "Google Lighthouse delivers structured audits and performance scores directly within Chrome DevTools.",
+      "topic": "Lighthouse Audits",
+      "timestamp_ref": "00:03:50",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0002"
+      ],
+      "id": 5
+    },
+    {
+      "question": "What is the recommended threshold for Largest Contentful Paint (LCP) to achieve a 'Good' Core Web Vitals rating?",
+      "options": [
+        "<= 1.0 second",
+        "<= 2.5 seconds",
+        "<= 4.0 seconds",
+        "<= 100 milliseconds"
+      ],
+      "correct_index": 1,
+      "explanation": "Google defines an LCP of 2.5 seconds or lower as 'Good', 2.5-4.0s as 'Needs Improvement', and >4.0s as 'Poor'.",
+      "topic": "LCP Thresholds",
+      "timestamp_ref": "00:06:10",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0003"
+      ],
+      "id": 6
+    },
+    {
+      "question": "Which attribute on <img> elements is critical for crawler comprehension and screen-reader accessibility?",
+      "options": [
+        "title",
+        "alt",
+        "name",
+        "role"
+      ],
+      "correct_index": 1,
+      "explanation": "The 'alt' attribute conveys image semantics to search engine indexers and assistive screen readers.",
+      "topic": "Image SEO & Alt Text",
+      "timestamp_ref": "00:10:05",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0005"
+      ],
+      "id": 7
+    },
+    {
+      "question": "In Google Core Web Vitals, what interaction does First Input Delay (FID) measure?",
+      "options": [
+        "The delay between a user's first input interaction and browser main-thread event handling",
+        "The time taken to establish an HTTPS handshake",
+        "The total frame rate rendering latency during scrolling",
+        "The duration required to load background web workers"
+      ],
+      "correct_index": 0,
+      "explanation": "FID quantifies responsiveness by timing the pause before the browser begins processing the user's initial tap or click.",
+      "topic": "FID Interactivity",
+      "timestamp_ref": "00:07:25",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0003"
+      ],
+      "id": 8
+    },
+    {
+      "question": "Which protocol of meta tags formats preview cards when pages are shared across social channels?",
+      "options": [
+        "JSON-LD Schema",
+        "Open Graph (og:) protocol",
+        "Robots Meta Directive",
+        "Microformats 2"
+      ],
+      "correct_index": 1,
+      "explanation": "Open Graph (og:title, og:image, og:description) defines the multimedia card displayed on social feeds.",
+      "topic": "Social Media Meta Tags",
+      "timestamp_ref": "00:04:30",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0002"
+      ],
+      "id": 9
+    },
+    {
+      "question": "What is the standard HTML tag and relation used to declare a browser tab favicon?",
+      "options": [
+        "<link rel='icon' type='image/x-icon' href='favicon.ico'>",
+        "<meta name='icon' content='favicon.ico'>",
+        "<favicon src='favicon.ico'>",
+        "<img rel='icon' src='favicon.ico'>"
+      ],
+      "correct_index": 0,
+      "explanation": "<link rel='icon'> specifies the icon file that browsers render on tabs and bookmarks.",
+      "topic": "Favicon Setup",
+      "timestamp_ref": "00:09:15",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0004"
+      ],
+      "id": 10
+    }
+  ],
+  "generated_at": 1795674867.8863976,
+  "is_mock": true,
+  "is_cached": false
+}

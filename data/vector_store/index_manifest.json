@@ -1,8 +1,18 @@
 {
-  "dataset": "demo_permissive_html",
-  "total_chunks": 5,
-  "embedding_model": "intfloat/multilingual-e5-small",
+  "total_chunks": 42,
   "embedding_dimension": 384,
-  "backend": "faiss",
-  "normalized": true
+  "model_name": "intfloat/multilingual-e5-small",
+  "index_type": "IndexFlatIP",
+  "metric": "inner_product",
+  "normalized": true,
+  "lectures": [
+    "DEMO_01",
+    "DEMO_02",
+    "DEMO_03"
+  ],
+  "lecture_counts": {
+    "DEMO_01": 14,
+    "DEMO_02": 14,
+    "DEMO_03": 14
+  }
 }

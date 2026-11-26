@@ -809,13 +809,26 @@ class LLMClient:
             cids = [top_chunk["chunk_id"]]
             start_ts = top_chunk.get("start_timestamp", "00:00:00")
             title = top_chunk.get("lecture_title", "HTML Lecture")
+            chunk_text = top_chunk.get("text", "")
 
             if lang == "Hindi":
-                ans = f"लेक्चर '{title}' ({start_ts}) के अनुसार, {question} के बारे में विस्तार से समझाया गया है।"
+                ans = (
+                    f"लेक्चर '{title}' ({start_ts}) के अनुसार:\n\n"
+                    f"{chunk_text}\n\n"
+                    f"यह व्याख्या आपके प्रश्न का सीधा और प्रमाणित उत्तर प्रदान करती है।"
+                )
             elif lang == "Hinglish":
-                ans = f"Lecture '{title}' ({start_ts}) ke mutabiq, {question} ko detail me explain kiya gaya hai."
+                ans = (
+                    f"Lecture '{title}' ({start_ts}) ke mutabiq:\n\n"
+                    f"{chunk_text}\n\n"
+                    f"Yeh practical explanation aapke doubt ko clear karti hai."
+                )
             else:
-                ans = f"According to lecture '{title}' ({start_ts}), this concept is explained with practical examples in HTML."
+                ans = (
+                    f"According to the lecture '{title}' (starting at timestamp {start_ts}):\n\n"
+                    f"{chunk_text}\n\n"
+                    f"This verified concept directly addresses your question."
+                )
             missing = None
 
         mock_data = {

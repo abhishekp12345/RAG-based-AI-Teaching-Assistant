@@ -1,22 +1,55 @@
 {
   "project": "LearnMate AI",
-  "description": "Original Demonstration Lecture Manifest for PhysicsWallah APM Builder Screening",
-  "license": "MIT / Creative Commons (Project Demonstration)",
-  "total_lectures": 1,
+  "course_title": "Web Development Fundamentals",
+  "description": "Comprehensive 3-Lecture Course for PhysicsWallah APM Builder Screening",
+  "total_lectures": 3,
+  "total_duration_seconds": 756.0,
+  "total_duration_formatted": "00:12:36",
   "lectures": [
     {
       "lecture_id": "DEMO_01",
-      "lecture_title": "Introduction to HTML & Web Development Fundamentals | Demo Tutorial",
+      "lecture_title": "Your First HTML Website",
       "tutorial_number": 1,
-      "video_filename": "demo_sample_lecture.mp4",
-      "video_path": "data/videos/demo_sample_lecture.mp4",
-      "audio_path": "data/audio/demo_sample_lecture.wav",
-      "transcript_path": "data/transcripts/sample_demo_transcript.json",
-      "duration_seconds": 60.0,
-      "duration_formatted": "00:01:00",
+      "video_filename": "lecture_01_html_fundamentals.mp4",
+      "video_path": "data/videos/lecture_01_html_fundamentals.mp4",
+      "audio_path": "data/audio/DEMO_01_audio.wav",
+      "transcript_path": "data/transcripts/DEMO_01_transcript.json",
+      "chunks_path": "data/chunks/DEMO_01_chunks.json",
+      "duration_seconds": 252.0,
+      "duration_formatted": "00:04:12",
       "detected_language": "en",
-      "total_segments": 5,
-      "processing_status": "DEMONSTRATION_READY"
+      "total_segments": 14,
+      "processing_status": "READY"
+    },
+    {
+      "lecture_id": "DEMO_02",
+      "lecture_title": "Video, Audio & Media in HTML",
+      "tutorial_number": 2,
+      "video_filename": "lecture_02_html_multimedia.mp4",
+      "video_path": "data/videos/lecture_02_html_multimedia.mp4",
+      "audio_path": "data/audio/DEMO_02_audio.wav",
+      "transcript_path": "data/transcripts/DEMO_02_transcript.json",
+      "chunks_path": "data/chunks/DEMO_02_chunks.json",
+      "duration_seconds": 252.0,
+      "duration_formatted": "00:04:12",
+      "detected_language": "en",
+      "total_segments": 14,
+      "processing_status": "READY"
+    },
+    {
+      "lecture_id": "DEMO_03",
+      "lecture_title": "SEO & Core Web Vitals",
+      "tutorial_number": 3,
+      "video_filename": "lecture_03_seo_core_web_vitals.mp4",
+      "video_path": "data/videos/lecture_03_seo_core_web_vitals.mp4",
+      "audio_path": "data/audio/DEMO_03_audio.wav",
+      "transcript_path": "data/transcripts/DEMO_03_transcript.json",
+      "chunks_path": "data/chunks/DEMO_03_chunks.json",
+      "duration_seconds": 252.0,
+      "duration_formatted": "00:04:12",
+      "detected_language": "en",
+      "total_segments": 14,
+      "processing_status": "READY"
     }
   ]
 }

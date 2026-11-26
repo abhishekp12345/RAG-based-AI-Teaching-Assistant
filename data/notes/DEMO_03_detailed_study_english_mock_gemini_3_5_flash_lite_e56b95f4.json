@@ -1,0 +1,116 @@
+{
+  "lecture_id": "DEMO_03",
+  "lecture_title": "SEO & Core Web Vitals",
+  "notes_style": "detailed_study",
+  "language": "English",
+  "executive_summary": "This lecture explores Search Engine Optimization (SEO) principles and performance auditing in modern HTML. It covers essential <head> metadata including viewport, description, and Open Graph tags, alongside practical auditing with Google Chrome Lighthouse. Key web performance metrics known as Core Web Vitals (LCP, FID, and CLS) are demystified with actionable optimization strategies.",
+  "learning_objectives": [
+    "Master on-page HTML SEO foundations and search engine indexing mechanics",
+    "Properly configure essential <meta> tags including description and responsive viewport",
+    "Execute performance, accessibility, and SEO audits using Chrome DevTools Lighthouse",
+    "Understand and optimize Core Web Vitals metrics: LCP, FID, and CLS"
+  ],
+  "sections": [
+    {
+      "heading": "1. SEO Foundations & Essential Meta Tags",
+      "content": "Search Engine Optimization (SEO) is the process of improving site discoverability on search engines. The HTML <head> element hosts critical crawlers directives. The description meta tag specifies the snippet displayed in search results, while the viewport tag ensures responsive mobile scaling.",
+      "code_snippets": [
+        "<meta name=\"description\" content=\"Master modern HTML, SEO, and web development with Sigma Batch.\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0001",
+        "DEMO_03_CHK_0002"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_03_CHK_0001",
+          "timestamp": "00:00:00",
+          "tutorial_number": 3
+        },
+        {
+          "chunk_id": "DEMO_03_CHK_0002",
+          "timestamp": "00:18:00",
+          "tutorial_number": 3
+        }
+      ]
+    },
+    {
+      "heading": "2. Google Lighthouse Performance Audits",
+      "content": "Chrome DevTools includes Google Lighthouse, an automated auditing tool that benchmarks web pages across four pillars: Performance, Accessibility, Best Practices, and SEO. It highlights opportunities like unoptimized image formats and render-blocking scripts.",
+      "code_snippets": [
+        "<!-- Chrome DevTools: F12 -> Lighthouse -> Analyze page load -->\n<link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\">"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0003",
+        "DEMO_03_CHK_0004"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_03_CHK_0003",
+          "timestamp": "00:36:00",
+          "tutorial_number": 3
+        },
+        {
+          "chunk_id": "DEMO_03_CHK_0004",
+          "timestamp": "00:54:00",
+          "tutorial_number": 3
+        }
+      ]
+    },
+    {
+      "heading": "3. Core Web Vitals (LCP, FID, CLS)",
+      "content": "Google Core Web Vitals assess real-world user experience across three essential vectors:\n- LCP (Largest Contentful Paint): Measures perceived loading speed (Ideal: <= 2.5 seconds).\n- FID (First Input Delay): Measures interactivity and input latency (Ideal: <= 100 milliseconds).\n- CLS (Cumulative Layout Shift): Quantifies visual stability and jarring content jumps (Ideal: <= 0.1).",
+      "code_snippets": [
+        "<!-- Prevent CLS by reserving aspect-ratio or dimensions -->\n<img src=\"hero.jpg\" alt=\"Tutorial Hero\" width=\"800\" height=\"450\" loading=\"lazy\">"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0005",
+        "DEMO_03_CHK_0006"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_03_CHK_0005",
+          "timestamp": "01:12:00",
+          "tutorial_number": 3
+        },
+        {
+          "chunk_id": "DEMO_03_CHK_0006",
+          "timestamp": "01:30:00",
+          "tutorial_number": 3
+        }
+      ]
+    }
+  ],
+  "definitions_and_terms": [
+    {
+      "term": "SEO",
+      "definition": "Search Engine Optimization: Techniques used to increase organic search engine visibility.",
+      "timestamp_ref": "00:00:15"
+    },
+    {
+      "term": "LCP",
+      "definition": "Largest Contentful Paint: Time taken to render the largest visible DOM content block.",
+      "timestamp_ref": "00:05:40"
+    },
+    {
+      "term": "CLS",
+      "definition": "Cumulative Layout Shift: Metric quantifying unexpected layout shifts during page lifecycle.",
+      "timestamp_ref": "00:08:12"
+    }
+  ],
+  "common_pitfalls": [
+    "Omitting the viewport meta tag, causing mobile browsers to render desktop layouts at 980px.",
+    "Failing to declare width and height on <img> elements, leading to high Cumulative Layout Shift (CLS).",
+    "Keyword stuffing in meta descriptions instead of writing compelling, human-readable summaries."
+  ],
+  "revision_checklist": [
+    "Is the <meta name='description'> concise and under 160 characters?",
+    "Is the responsive <meta name='viewport'> tag present in <head>?",
+    "Do all <img> tags include descriptive alt attributes and explicit dimensions?",
+    "Does the page score 90+ on Chrome DevTools Lighthouse SEO audit?",
+    "Is Largest Contentful Paint (LCP) verified under 2.5 seconds?"
+  ],
+  "generated_at": 1795674867.8655312,
+  "is_mock": true,
+  "is_cached": false
+}

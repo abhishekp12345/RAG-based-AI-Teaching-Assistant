@@ -1,0 +1,115 @@
+{
+  "lecture_id": "DEMO_01",
+  "lecture_title": "Your First HTML Website",
+  "notes_style": "detailed_study",
+  "language": "English",
+  "executive_summary": "This lecture introduces web development fundamentals by constructing a first HTML website from scratch. It covers the anatomy of an HTML document (<!DOCTYPE html>, <html>, <head>, <body>), developer workflow in VS Code, Emmet boilerplate generation (!), semantic heading hierarchies (<h1> through <h6>), paragraphs, hyperlinks (<a>), and images (<img>).",
+  "learning_objectives": [
+    "Understand the structural anatomy of an HTML5 document",
+    "Rapidly generate valid HTML boilerplate using VS Code Emmet shortcuts",
+    "Implement semantic content hierarchy using headings (<h1>-<h6>) and paragraphs (<p>)",
+    "Create hyperlinks with anchor tags and embed images with accessibility attributes"
+  ],
+  "sections": [
+    {
+      "heading": "1. HTML Document Anatomy & Boilerplate",
+      "content": "Every modern HTML5 document commences with '<!DOCTYPE html>', declaring the document standard to the browser. The '<html>' element encloses the entire tree, '<head>' contains page metadata, scripts, and stylesheets, while '<body>' encompasses all visual and interactive content.",
+      "code_snippets": [
+        "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>My First Website</title>\n</head>\n<body>\n  <h1>Welcome to Web Dev!</h1>\n</body>\n</html>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0001",
+        "DEMO_01_CHK_0002"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_01_CHK_0001",
+          "timestamp": "00:00:00",
+          "tutorial_number": 1
+        },
+        {
+          "chunk_id": "DEMO_01_CHK_0002",
+          "timestamp": "00:18:00",
+          "tutorial_number": 1
+        }
+      ]
+    },
+    {
+      "heading": "2. Semantic Text Hierarchy (Headings & Paragraphs)",
+      "content": "HTML provides six tiers of headings, from <h1> (highest significance) to <h6> (lowest). Best practices dictate exactly one <h1> per page for search engine clarity and screen reader navigation. Paragraphs (<p>) encapsulate standard blocks of text.",
+      "code_snippets": [
+        "<h1>Main Course Heading</h1>\n<h2>Chapter 1: Foundations</h2>\n<p>This is a paragraph explaining the core concepts of HTML.</p>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0003",
+        "DEMO_01_CHK_0004"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_01_CHK_0003",
+          "timestamp": "00:36:00",
+          "tutorial_number": 1
+        },
+        {
+          "chunk_id": "DEMO_01_CHK_0004",
+          "timestamp": "00:54:00",
+          "tutorial_number": 1
+        }
+      ]
+    },
+    {
+      "heading": "3. Hyperlinks & Media Elements (<a> and <img>)",
+      "content": "The anchor element (<a>) links documents via its 'href' attribute; setting target='_blank' opens links in a new browsing context. The image element (<img>) is self-closing and mandates 'src' (asset location) and 'alt' (accessible alternative text).",
+      "code_snippets": [
+        "<a href=\"https://pw.live\" target=\"_blank\" rel=\"noopener\">Visit PhysicsWallah</a>\n<img src=\"images/logo.png\" alt=\"PW Logo\" width=\"200\">"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0005",
+        "DEMO_01_CHK_0006"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_01_CHK_0005",
+          "timestamp": "01:12:00",
+          "tutorial_number": 1
+        },
+        {
+          "chunk_id": "DEMO_01_CHK_0006",
+          "timestamp": "01:30:00",
+          "tutorial_number": 1
+        }
+      ]
+    }
+  ],
+  "definitions_and_terms": [
+    {
+      "term": "<!DOCTYPE html>",
+      "definition": "Document type declaration instructing browsers to render HTML5 standard.",
+      "timestamp_ref": "00:02:15"
+    },
+    {
+      "term": "href",
+      "definition": "Hypertext Reference attribute that specifies the destination URL of a link.",
+      "timestamp_ref": "00:11:30"
+    },
+    {
+      "term": "alt attribute",
+      "definition": "Alternative text descriptor required for accessibility and fallback display.",
+      "timestamp_ref": "00:15:20"
+    }
+  ],
+  "common_pitfalls": [
+    "Using multiple <h1> tags on a single page, which breaks semantic document hierarchy.",
+    "Omitting the 'alt' attribute on <img> elements, penalizing accessibility audits.",
+    "Misconfiguring relative asset paths (e.g. failing to account for parent directory '../' syntax)."
+  ],
+  "revision_checklist": [
+    "Does the document declare <!DOCTYPE html> on the first line?",
+    "Is there exactly one <h1> heading defining the primary topic?",
+    "Do external anchor links include target='_blank' and rel='noopener'?",
+    "Do all <img> elements include accurate, descriptive alt text?"
+  ],
+  "generated_at": 1795674867.8168507,
+  "is_mock": true,
+  "is_cached": false
+}

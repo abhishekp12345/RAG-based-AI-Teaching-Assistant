@@ -322,11 +322,17 @@ Open the local URL displayed in your terminal (typically `http://localhost:8501`
 
 ---
 
-## 9. Ingesting Authorized Lectures & Regenerating Embeddings and FAISS Indexes
+## 9. Built-in 3-Lecture Demonstration Course & Custom Lecture Ingestion
 
-Because third-party educational lecture videos, verbatim transcripts, and derived vector indexes are excluded from this public repository for copyright protection, this repository includes an original, permissive demonstration sample in `data/chunks/sample_demo_chunks.json`.
+This repository includes a complete, original, and permissive 3-lecture educational demonstration course titled **"Web Development Fundamentals"** (total duration: 12 minutes 36 seconds, 42 chunks across 3 lectures) with full video seeking, pre-computed FAISS embeddings, offline Smart Notes, and interactive Practice Quizzes:
 
-To ingest your own lecture videos or re-process authorized course lectures from scratch, follow this end-to-end pipeline:
+| Lecture ID | Title | Duration | Chunks | Topic Coverage | Video Asset |
+|---|---|---|---|---|---|
+| **DEMO_01** | *Your First HTML Website* | 04:12 (252s) | 14 | HTML5 Doctype, document skeleton, head/body, headings `<h1>-<h6>`, paragraphs, anchor links, and images | `lecture_01_html_fundamentals.mp4` |
+| **DEMO_02** | *Video, Audio & Media in HTML* | 04:12 (252s) | 14 | Native `<video>` / `<audio>` elements, controls, muted autoplay policies, loop, poster images, format fallbacks, and `<iframe>` | `lecture_02_html_multimedia.mp4` |
+| **DEMO_03** | *SEO & Core Web Vitals* | 04:12 (252s) | 14 | Search Engine Optimization, meta description, viewport, Google Lighthouse audits, and Core Web Vitals (LCP, FID, CLS) | `lecture_03_seo_core_web_vitals.mp4` |
+
+To ingest your own additional lecture videos or re-process authorized course lectures from scratch, follow this end-to-end pipeline:
 
 ### Step 1: Place Your Video Files
 Place your educational video files (`.webm`, `.mp4`) into `data/videos/`.
@@ -409,8 +415,8 @@ To ensure complete transparency and submission integrity, testing is categorized
 ## 11. Educational Content Attribution & Fair Use Notice
 
 - **Lecture Attribution:** Educational videos analyzed during the screening evaluation are from the publicly available *Sigma Web Development Course* (Tutorials #2, #6, and #10) by **CodeWithHarry**, utilized strictly for non-commercial educational demonstration and technical screening evaluation.
-- **Repository Cleanliness:** In accordance with copyright ethics and GitHub storage guidelines, large binary video files (`.webm`, `.mp4`), raw audio (`.wav`), and zip archives (`vodeo_lecture.zip`) are **excluded** via `.gitignore`.
-- **Reproducibility:** A clean clone of this repository includes sample demonstration data in `data/chunks/sample_demo_chunks.json`, allowing reviewers to run the full application and RAG pipeline without needing to download external video files.
+- **Repository Cleanliness:** In accordance with copyright ethics and GitHub storage guidelines, third-party full-length lecture videos (`.webm`), raw audio (`.wav`), and zip archives (`vodeo_lecture.zip`) are **excluded** via `.gitignore`.
+- **Reproducibility:** A clean clone of this repository includes the complete original 3-lecture demonstration course (12m 36s, 42 chunks across 3 lectures) with lightweight demonstration videos in `data/videos/`, enabling reviewers to run the full application, video timestamp seeking, and RAG pipeline immediately without external downloads.
 
 ---
 

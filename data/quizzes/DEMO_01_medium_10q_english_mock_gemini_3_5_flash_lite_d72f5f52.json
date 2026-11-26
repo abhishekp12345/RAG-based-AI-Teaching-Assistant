@@ -1,0 +1,183 @@
+{
+  "quiz_id": "QUIZ_DEMO_01_MEDIUM_10Q",
+  "lecture_id": "DEMO_01",
+  "lecture_title": "Your First HTML Website",
+  "difficulty": "Medium",
+  "num_questions": 10,
+  "language": "English",
+  "questions": [
+    {
+      "question": "What is the critical purpose of placing '<!DOCTYPE html>' on the very first line of an HTML document?",
+      "options": [
+        "It informs the browser engine to render the page in standard HTML5 mode rather than legacy quirks mode",
+        "It assigns an administrative password to the web directory",
+        "It loads the default browser stylesheet",
+        "It registers the DNS server hostname"
+      ],
+      "correct_index": 0,
+      "explanation": "The '<!DOCTYPE html>' directive signals modern HTML5 document parsing to avoid legacy quirks mode rendering.",
+      "topic": "HTML5 Doctype",
+      "timestamp_ref": "00:02:15",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0001"
+      ],
+      "id": 1
+    },
+    {
+      "question": "What primary architectural difference distinguishes the <head> element from the <body> element in HTML?",
+      "options": [
+        "The <head> contains page metadata and settings; the <body> contains all visual document content",
+        "The <head> is rendered on mobile only; the <body> renders on desktop",
+        "The <head> contains graphical media; the <body> contains typography",
+        "There is no distinction; they are interchangeable"
+      ],
+      "correct_index": 0,
+      "explanation": "The <head> element hosts invisible metadata, character sets, and assets; <body> encloses visible layout elements.",
+      "topic": "Document Structure",
+      "timestamp_ref": "00:04:10",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0002"
+      ],
+      "id": 2
+    },
+    {
+      "question": "Which principle represents semantic best practice regarding heading hierarchy (<h1> through <h6>)?",
+      "options": [
+        "Use exactly one <h1> per page to define the primary subject for users and search engine crawlers",
+        "The <h6> tag displays the largest typography",
+        "Heading tags carry no semantic significance and serve purely as visual styling shortcuts",
+        "Every paragraph requires a preceding <h1>"
+      ],
+      "correct_index": 0,
+      "explanation": "An HTML document must maintain a logical outline; exactly one <h1> designates the primary topic of the page.",
+      "topic": "Heading Hierarchy",
+      "timestamp_ref": "00:08:30",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0003"
+      ],
+      "id": 3
+    },
+    {
+      "question": "Which attribute on an anchor tag (<a>) opens the destination URL in a new browser tab?",
+      "options": [
+        "target='_blank'",
+        "open='tab'",
+        "window='new'",
+        "href='new_window'"
+      ],
+      "correct_index": 0,
+      "explanation": "Setting target='_blank' instructs the browser to open the linked resource in a new browsing context.",
+      "topic": "Anchor Target Attribute",
+      "timestamp_ref": "00:12:15",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0004"
+      ],
+      "id": 4
+    },
+    {
+      "question": "What is the primary role of the 'alt' attribute on the <img> element?",
+      "options": [
+        "It provides alternative text for accessibility screen readers and fallback text if image loading fails",
+        "It sets the image border radius dynamically",
+        "It defines the high-DPI retina multiplier",
+        "It forces automatic image caching on proxy servers"
+      ],
+      "correct_index": 0,
+      "explanation": "The 'alt' attribute provides descriptive alternative text indispensable for screen reader users and SEO indexers.",
+      "topic": "Image Alt Accessibility",
+      "timestamp_ref": "00:15:20",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0005"
+      ],
+      "id": 5
+    },
+    {
+      "question": "Which Emmet abbreviation in VS Code expands into the complete HTML5 boilerplate structure?",
+      "options": [
+        "!",
+        "html:boilerplate",
+        "Ctrl + Alt + H",
+        "#start"
+      ],
+      "correct_index": 0,
+      "explanation": "Typing '!' (exclamation mark) and pressing Tab or Enter in VS Code immediately generates the full HTML5 scaffold.",
+      "topic": "Emmet Shortcuts",
+      "timestamp_ref": "00:03:30",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0001"
+      ],
+      "id": 6
+    },
+    {
+      "question": "Which of the following HTML elements is a 'void' (self-closing) element without an end tag?",
+      "options": [
+        "<img>",
+        "<p>",
+        "<div>",
+        "<h1>"
+      ],
+      "correct_index": 0,
+      "explanation": "Void elements like <img>, <br>, <meta>, and <hr> cannot have child nodes and omit closing tags.",
+      "topic": "Void Elements",
+      "timestamp_ref": "00:16:05",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0005"
+      ],
+      "id": 7
+    },
+    {
+      "question": "What is the correct and valid syntax to link to the PhysicsWallah website?",
+      "options": [
+        "<a href='https://pw.live'>PhysicsWallah</a>",
+        "<link to='https://pw.live'>PhysicsWallah</link>",
+        "<anchor url='https://pw.live'>PhysicsWallah</anchor>",
+        "<url link='https://pw.live'>PhysicsWallah</url>"
+      ],
+      "correct_index": 0,
+      "explanation": "The anchor tag (<a>) pairing with 'href' constitutes standard HTML hyperlink syntax.",
+      "topic": "Hyperlink Syntax",
+      "timestamp_ref": "00:11:45",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0004"
+      ],
+      "id": 8
+    },
+    {
+      "question": "How does the 'Live Server' extension in VS Code streamline web development workflow?",
+      "options": [
+        "It hosts files on a local development server and triggers automatic browser reload on file save",
+        "It minifies JavaScript and CSS bundles into production builds",
+        "It converts HTML tags into React components automatically",
+        "It deploys static HTML directly to a public cloud CDN"
+      ],
+      "correct_index": 0,
+      "explanation": "Live Server spawns a local development web server and injects live-reload web sockets upon file modifications.",
+      "topic": "Developer Tooling",
+      "timestamp_ref": "00:05:50",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0002"
+      ],
+      "id": 9
+    },
+    {
+      "question": "According to web standards and SEO guidelines, how many <h1> elements should appear per page?",
+      "options": [
+        "Exactly 1",
+        "As many as desired",
+        "A minimum of 5",
+        "Zero"
+      ],
+      "correct_index": 0,
+      "explanation": "Best practices dictate a single <h1> heading per document representing the overarching topic.",
+      "topic": "SEO Semantic Heading",
+      "timestamp_ref": "00:09:40",
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0003"
+      ],
+      "id": 10
+    }
+  ],
+  "generated_at": 1795674867.8820066,
+  "is_mock": true,
+  "is_cached": false
+}

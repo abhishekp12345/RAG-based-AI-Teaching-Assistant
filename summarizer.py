@@ -209,7 +209,7 @@ class LectureSummarizer:
             }
 
         # Lecture-specific grounded data
-        if lecture_id == "LEC_01":  # Tutorial #6: SEO & Core Web Vitals
+        if lecture_id in ("LEC_01", "DEMO_03"):  # SEO & Core Web Vitals
             title = "SEO and Core Web Vitals in HTML"
             if language == "Hindi":
                 summary = (
@@ -385,7 +385,7 @@ class LectureSummarizer:
                 }
             ]
 
-        elif lecture_id == "LEC_02":  # Tutorial #10: Video, Audio & Media in HTML
+        elif lecture_id in ("LEC_02", "DEMO_02"):  # Video, Audio & Media in HTML
             title = "Video, Audio & Media in HTML"
             if language == "Hindi":
                 summary = (

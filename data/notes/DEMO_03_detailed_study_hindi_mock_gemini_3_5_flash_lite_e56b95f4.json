@@ -1,0 +1,116 @@
+{
+  "lecture_id": "DEMO_03",
+  "lecture_title": "SEO & Core Web Vitals",
+  "notes_style": "detailed_study",
+  "language": "Hindi",
+  "executive_summary": "इस लेक्चर में हमने सीखा कि सर्च इंजन ऑप्टिमाइज़ेशन (SEO) क्या होता है और वेब पेजों को सर्च इंजन में उच्च रैंक दिलाने के लिए HTML मेटा टैग्स, व्यूपोर्ट, और इमेज ऑल्ट एट्रिब्यूट्स का सही उपयोग कैसे किया जाता है। साथ ही Chrome DevTools में Google Lighthouse की मदद से Core Web Vitals (LCP, FID, CLS) का प्रदर्शन मापना सीखा।",
+  "learning_objectives": [
+    "सर्च इंजन ऑप्टिमाइज़ेशन (SEO) और ऑन-पेज HTML तकनीकों को समझना",
+    "<meta> टैग्स (description, keywords, viewport) का सही विन्यास करना",
+    "Google Chrome Lighthouse टूल का उपयोग करके वेबसाइट ऑडिट करना",
+    "Core Web Vitals के तीन मुख्य स्तंभों (LCP, FID, CLS) को समझना और सुधारना"
+  ],
+  "sections": [
+    {
+      "heading": "1. SEO मूल बातें और महत्वपूर्ण मेटा टैग्स",
+      "content": "SEO (Search Engine Optimization) का मुख्य उद्देश्य वेबसाइट की विजिबिलिटी और ऑर्गेनिक रैंकिंग को बढ़ाना है। HTML <head> के अंदर <meta name='description'> सर्च रिजल्ट्स में दिखाई देने वाला स्निपेट तय करता है। मोबाइल डिवाइसों पर सही रेंडरिंग के लिए viewport मेटा टैग अनिवार्य है।",
+      "code_snippets": [
+        "<meta name=\"description\" content=\"Master modern HTML, SEO, and web development with Sigma Batch.\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0001",
+        "DEMO_03_CHK_0002"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_03_CHK_0001",
+          "timestamp": "00:00:00",
+          "tutorial_number": 3
+        },
+        {
+          "chunk_id": "DEMO_03_CHK_0002",
+          "timestamp": "00:18:00",
+          "tutorial_number": 3
+        }
+      ]
+    },
+    {
+      "heading": "2. Google Lighthouse ऑडिट और परफॉरमेंस मैट्रिक्स",
+      "content": "Google Chrome DevTools का Lighthouse पैनल वेबसाइट की परफॉरमेंस, एक्सेसिबिलिटी, बेस्ट प्रैक्टिसेज और SEO का व्यापक स्कोर देता है। यह अनऑप्टिमाइज़्ड इमेजेस और धीमे रेंडर-ब्लॉकिंग संसाधनों की पहचान करता है।",
+      "code_snippets": [
+        "<!-- Chrome DevTools: F12 -> Lighthouse -> Analyze page load -->\n<link rel=\"icon\" type=\"image/x-icon\" href=\"favicon.ico\">"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0003",
+        "DEMO_03_CHK_0004"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_03_CHK_0003",
+          "timestamp": "00:36:00",
+          "tutorial_number": 3
+        },
+        {
+          "chunk_id": "DEMO_03_CHK_0004",
+          "timestamp": "00:54:00",
+          "tutorial_number": 3
+        }
+      ]
+    },
+    {
+      "heading": "3. Core Web Vitals (LCP, FID, CLS)",
+      "content": "Core Web Vitals उपयोगकर्ता अनुभव के तीन महत्वपूर्ण पहलू मापते हैं:\n- LCP (Largest Contentful Paint): मुख्य सामग्री लोड होने का समय (2.5 सेकंड से कम आदर्श)।\n- FID (First Input Delay): पहले इंटरैक्शन पर रिस्पॉन्स में देरी (100ms से कम आदर्श)।\n- CLS (Cumulative Layout Shift): अनपेक्षित लेआउट बदलाव (0.1 से कम आदर्श)।",
+      "code_snippets": [
+        "<!-- Prevent CLS by reserving aspect-ratio or dimensions -->\n<img src=\"hero.jpg\" alt=\"Tutorial Hero\" width=\"800\" height=\"450\" loading=\"lazy\">"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0005",
+        "DEMO_03_CHK_0006"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_03_CHK_0005",
+          "timestamp": "01:12:00",
+          "tutorial_number": 3
+        },
+        {
+          "chunk_id": "DEMO_03_CHK_0006",
+          "timestamp": "01:30:00",
+          "tutorial_number": 3
+        }
+      ]
+    }
+  ],
+  "definitions_and_terms": [
+    {
+      "term": "SEO",
+      "definition": "सर्च इंजन ऑप्टिमाइज़ेशन: सर्च इंजन में वेबसाइट की विजिबिलिटी बढ़ाने की प्रक्रिया।",
+      "timestamp_ref": "00:00:15"
+    },
+    {
+      "term": "LCP",
+      "definition": "Largest Contentful Paint: वेबपेज पर सबसे बड़े कंटेंट ब्लॉक के लोड होने का समय।",
+      "timestamp_ref": "00:05:40"
+    },
+    {
+      "term": "CLS",
+      "definition": "Cumulative Layout Shift: पेज लोड होते समय एलिमेंट्स का अनचाहा खिसकना।",
+      "timestamp_ref": "00:08:12"
+    }
+  ],
+  "common_pitfalls": [
+    "<meta name='viewport'> छोड़ देना, जिससे मोबाइल पर पेज ज़ूम-आउट और अनरेस्पॉन्सिव दिखता है।",
+    "<img> टैग में width और height न देना, जिससे इमेज लोड होते ही CLS (लेआउट शिफ्ट) होता है।",
+    "कीवर्ड स्टफिंग करना, जिससे सर्च इंजन पेज पर पेनल्टी लगा सकते हैं।"
+  ],
+  "revision_checklist": [
+    "क्या आपने <head> में <meta name='description'> जोड़ा है?",
+    "क्या मोबाइल फ्रेंडली viewport टैग मौजूद है?",
+    "क्या सभी इमेजेस में वर्णनात्मक alt एट्रिब्यूट मौजूद है?",
+    "क्या Lighthouse ऑडिट में SEO स्कोर 90+ प्राप्त हुआ है?",
+    "क्या LCP 2.5 सेकंड से कम समय में लोड हो रहा है?"
+  ],
+  "generated_at": 1795674867.8669662,
+  "is_mock": true,
+  "is_cached": false
+}

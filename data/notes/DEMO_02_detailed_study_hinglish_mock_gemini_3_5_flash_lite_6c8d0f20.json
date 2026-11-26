@@ -1,0 +1,115 @@
+{
+  "lecture_id": "DEMO_02",
+  "lecture_title": "Video, Audio & Media in HTML",
+  "notes_style": "detailed_study",
+  "language": "Hinglish",
+  "executive_summary": "Is lecture mein humne HTML5 multimedia elements detail mein seekhe. Humne dekha ki <video> aur <audio> tags kaise kaam karte hain, controls, autoplay, muted, loop aur poster attributes kaise use hote hain, aur YouTube videos ko <iframe> ke through seamlessly kaise embed kiya jata hai.",
+  "learning_objectives": [
+    "<video> aur <audio> tags ke native capabilities master karna",
+    "Media attributes (controls, autoplay, muted, loop, poster) ka behavior samajhna",
+    "Multiple browser compatibility ke liye <source> tags configure karna",
+    "<iframe> tag use karke YouTube aur maps embed karna"
+  ],
+  "sections": [
+    {
+      "heading": "1. <video> Tag & Essential Attributes",
+      "content": "<video> tag bina kisi external player ke video stream karta hai. Agar aap controls attribute nahi denge toh user ko play/pause buttons nahi dikhenge. Modern browsers mein video tabhi autoplay hoti hai jab usme muted attribute laga ho.",
+      "code_snippets": [
+        "<video src=\"media/sample.mp4\" controls width=\"640\" poster=\"thumbnail.jpg\">\n  Your browser does not support the video tag.\n</video>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0001",
+        "DEMO_02_CHK_0002"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_02_CHK_0001",
+          "timestamp": "00:00:00",
+          "tutorial_number": 2
+        },
+        {
+          "chunk_id": "DEMO_02_CHK_0002",
+          "timestamp": "00:18:00",
+          "tutorial_number": 2
+        }
+      ]
+    },
+    {
+      "heading": "2. <audio> Element & Fallback Sources",
+      "content": "<audio> tag sound files play karne ke liye hota hai. Browser compatibility ensure karne ke liye <source src='...' type='audio/mpeg'> use karna standard practice hai.",
+      "code_snippets": [
+        "<audio controls autoplay muted>\n  <source src=\"podcast.mp3\" type=\"audio/mpeg\">\n  <source src=\"podcast.ogg\" type=\"audio/ogg\">\n</audio>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0003",
+        "DEMO_02_CHK_0004"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_02_CHK_0003",
+          "timestamp": "00:36:00",
+          "tutorial_number": 2
+        },
+        {
+          "chunk_id": "DEMO_02_CHK_0004",
+          "timestamp": "00:54:00",
+          "tutorial_number": 2
+        }
+      ]
+    },
+    {
+      "heading": "3. <iframe> Embeds (YouTube, Maps)",
+      "content": "<iframe> tag se kisi doosri website ka page ya YouTube video display kiya ja sakta hai. Isme src, width, height, aur allowfullscreen attributes standard hote hain.",
+      "code_snippets": [
+        "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" title=\"YouTube video\" allowfullscreen></iframe>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0005",
+        "DEMO_02_CHK_0006"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_02_CHK_0005",
+          "timestamp": "01:12:00",
+          "tutorial_number": 2
+        },
+        {
+          "chunk_id": "DEMO_02_CHK_0006",
+          "timestamp": "01:30:00",
+          "tutorial_number": 2
+        }
+      ]
+    }
+  ],
+  "definitions_and_terms": [
+    {
+      "term": "<video>",
+      "definition": "HTML5 media tag to play native video files.",
+      "timestamp_ref": "00:01:20"
+    },
+    {
+      "term": "poster",
+      "definition": "Attribute jo video play hone se pehle thumbnail image show karta hai.",
+      "timestamp_ref": "00:04:15"
+    },
+    {
+      "term": "<iframe>",
+      "definition": "Inline frame element for embedding external documents and videos.",
+      "timestamp_ref": "00:09:45"
+    }
+  ],
+  "common_pitfalls": [
+    "Autoplay bina muted lagana, jise browser audio policy block kar deti hai.",
+    "Controls attribute miss karna jisse student video control nahi kar pata.",
+    "Image/video ka invalid relative path dena."
+  ],
+  "revision_checklist": [
+    "Kya video tag mein controls attribute added hai?",
+    "Autoplay ke saath muted mandatory lagaya hai?",
+    "Video thumbnail ke liye poster attribute set hai?",
+    "YouTube embed <iframe> mein allowfullscreen enable hai?"
+  ],
+  "generated_at": 1795674867.8409402,
+  "is_mock": true,
+  "is_cached": false
+}

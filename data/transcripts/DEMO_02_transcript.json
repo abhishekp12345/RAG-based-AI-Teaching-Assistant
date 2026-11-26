@@ -1,0 +1,120 @@
+{
+  "lecture_id": "DEMO_02",
+  "lecture_title": "Video, Audio & Media in HTML",
+  "total_duration": 252.0,
+  "total_segments": 14,
+  "segments": [
+    {
+      "segment_id": "DEMO_02_SEG_0001",
+      "start": 0.0,
+      "end": 18.0,
+      "start_timestamp": "00:00:00",
+      "end_timestamp": "00:18:00",
+      "text": "Welcome to Lecture 2. Prior to HTML5, playing audio or video required clunky third-party plugins like Flash. HTML5 introduced native video and audio elements, delivering hardware acceleration, battery efficiency, and standardized controls across all devices."
+    },
+    {
+      "segment_id": "DEMO_02_SEG_0002",
+      "start": 18.0,
+      "end": 36.0,
+      "start_timestamp": "00:18:00",
+      "end_timestamp": "00:36:00",
+      "text": "The video tag embeds video files natively. Always specify width and height attributes to reserve space on the page, which prevents layout shifts. Fallback text inside the tag ensures older browsers display a helpful message."
+    },
+    {
+      "segment_id": "DEMO_02_SEG_0003",
+      "start": 36.0,
+      "end": 54.0,
+      "start_timestamp": "00:36:00",
+      "end_timestamp": "00:54:00",
+      "text": "The controls attribute is a boolean attribute that tells the browser to display native playback buttons. This gives users full control over play, pause, volume, scrubbing, and fullscreen mode."
+    },
+    {
+      "segment_id": "DEMO_02_SEG_0004",
+      "start": 54.0,
+      "end": 72.0,
+      "start_timestamp": "00:54:00",
+      "end_timestamp": "01:12:00",
+      "text": "To ensure maximum compatibility, nest multiple source tags inside the video element. Place lightweight WebM files first, followed by universal MP4 fallbacks. The browser will automatically choose the first format it supports."
+    },
+    {
+      "segment_id": "DEMO_02_SEG_0005",
+      "start": 72.0,
+      "end": 90.0,
+      "start_timestamp": "01:12:00",
+      "end_timestamp": "01:30:00",
+      "text": "HTML5 offers boolean attributes like autoplay, muted, and loop. Autoplay begins playback immediately, muted starts the video without sound, and loop repeats playback continuously. These are frequently combined for ambient background videos."
+    },
+    {
+      "segment_id": "DEMO_02_SEG_0006",
+      "start": 90.0,
+      "end": 108.0,
+      "start_timestamp": "01:30:00",
+      "end_timestamp": "01:48:00",
+      "text": "Chrome, Safari, and Firefox strictly enforce autoplay restrictions to protect users from sudden loud noises. If you enable autoplay, you must also add the muted attribute, otherwise the browser will reject automatic playback."
+    },
+    {
+      "segment_id": "DEMO_02_SEG_0007",
+      "start": 108.0,
+      "end": 126.0,
+      "start_timestamp": "01:48:00",
+      "end_timestamp": "02:06:00",
+      "text": "The poster attribute points to a preview image displayed while the video downloads or before the user presses play. A high-quality poster improves page aesthetics and gives students a clear expectation of the lecture topic."
+    },
+    {
+      "segment_id": "DEMO_02_SEG_0008",
+      "start": 126.0,
+      "end": 144.0,
+      "start_timestamp": "02:06:00",
+      "end_timestamp": "02:24:00",
+      "text": "For podcasts and music tracks, HTML provides the dedicated audio element. Just like video, audio supports multiple source tags and the controls attribute, rendering a clean, lightweight audio player widget."
+    },
+    {
+      "segment_id": "DEMO_02_SEG_0009",
+      "start": 144.0,
+      "end": 162.0,
+      "start_timestamp": "02:24:00",
+      "end_timestamp": "02:42:00",
+      "text": "When delivering media online, format selection matters. MP4 with H.264 video is the universal standard supported everywhere. Modern WebM with VP9 compression reduces bandwidth consumption by up to 30 percent."
+    },
+    {
+      "segment_id": "DEMO_02_SEG_0010",
+      "start": 162.0,
+      "end": 180.0,
+      "start_timestamp": "02:42:00",
+      "end_timestamp": "03:00:00",
+      "text": "To embed third-party services like YouTube videos or interactive maps, we use the iframe element. Adding the allowfullscreen attribute permits fullscreen expansion, while loading lazy prevents off-screen iframes from slowing initial load."
+    },
+    {
+      "segment_id": "DEMO_02_SEG_0011",
+      "start": 180.0,
+      "end": 198.0,
+      "start_timestamp": "03:00:00",
+      "end_timestamp": "03:18:00",
+      "text": "Hardcoded pixel widths cause mobile overflow. Always apply max-width 100 percent and height auto in CSS to make video players fluid. For iframes, modern CSS aspect-ratio 16 by 9 maintains perfect proportions on all screen sizes."
+    },
+    {
+      "segment_id": "DEMO_02_SEG_0012",
+      "start": 198.0,
+      "end": 216.0,
+      "start_timestamp": "03:18:00",
+      "end_timestamp": "03:36:00",
+      "text": "Web accessibility ensures educational content reaches all learners. Use the track tag with WebVTT files to provide closed captions for hearing-impaired students and translated subtitles for multilingual audiences."
+    },
+    {
+      "segment_id": "DEMO_02_SEG_0013",
+      "start": 216.0,
+      "end": 234.0,
+      "start_timestamp": "03:36:00",
+      "end_timestamp": "03:54:00",
+      "text": "Avoid common multimedia mistakes: compress large files with tools like FFmpeg, always pair autoplay with muted, declare explicit aspect ratios to avoid layout jumps, and provide closed captions for accessibility."
+    },
+    {
+      "segment_id": "DEMO_02_SEG_0014",
+      "start": 234.0,
+      "end": 252.0,
+      "start_timestamp": "03:54:00",
+      "end_timestamp": "04:12:00",
+      "text": "To summarize Lecture 2: Native HTML5 video and audio provide seamless, plugin-free playback. Provide multiple source formats, remember that autoplay strictly requires muted, and use track elements to ensure full educational accessibility."
+    }
+  ]
+}
