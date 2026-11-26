@@ -392,26 +392,39 @@ def main():
         st.markdown("### ⚡ Execution & Model Mode")
 
         # Live Gemini vs Offline Demonstration Toggle
-        # Default to Offline Demonstration to prevent accidental free-tier quota depletion
-        exec_mode = st.radio(
-            "Backend Mode:",
-            options=["Offline Demonstration (Zero Quota)", "Live AI (Google Gemini Free Tier)"],
-            key="backend_exec_mode",
-            help="Offline Demonstration uses deterministic mock synthesis. Live AI calls Google Gemini."
-        )
-        is_live_mode = (exec_mode == "Live AI (Google Gemini Free Tier)")
+        # In public cloud deployment, default to Offline Demonstration and disable live mode
+        # unless explicitly enabled by administrator via ALLOW_LIVE_MODE=true with valid key.
+        allow_live = os.getenv("ALLOW_LIVE_MODE", "false").lower() in ("true", "1", "yes") and bool(config.GEMINI_API_KEY)
 
-        if is_live_mode:
-            st.markdown("""
-            <div style="font-size:0.8rem; background:#ECFDF5; border:1px solid #A7F3D0; padding:0.5rem; border-radius:6px; color:#065F46;">
-                <strong>⚡ Live AI Active:</strong> Google Gemini (Primary: gemini-3.5-flash-lite &middot; Fallback: gemini-3.8-flash &middot; ₹0.00 Cost).<br>
-                <em>Rate-limit policy: 15 RPM with single bounded fallback.</em>
-            </div>
-            """, unsafe_allow_html=True)
+        if allow_live:
+            exec_mode = st.radio(
+                "Backend Mode:",
+                options=["Offline Demonstration (Zero Quota)", "Live AI (Google Gemini Free Tier)"],
+                key="backend_exec_mode",
+                help="Offline Demonstration uses deterministic mock synthesis. Live AI calls Google Gemini."
+            )
+            is_live_mode = (exec_mode == "Live AI (Google Gemini Free Tier)")
+
+            if is_live_mode:
+                st.markdown("""
+                <div style="font-size:0.8rem; background:#ECFDF5; border:1px solid #A7F3D0; padding:0.5rem; border-radius:6px; color:#065F46;">
+                    <strong>⚡ Live AI Active:</strong> Google Gemini (Primary: gemini-3.5-flash-lite &middot; Fallback: gemini-3.8-flash &middot; ₹0.00 Cost).<br>
+                    <em>Rate-limit policy: 15 RPM with single bounded fallback.</em>
+                </div>
+                """, unsafe_allow_html=True)
+            else:
+                st.markdown("""
+                <div style="font-size:0.8rem; background:#F1F5F9; border:1px solid #CBD5E1; padding:0.5rem; border-radius:6px; color:#475569;">
+                    <strong>🧪 Offline Demo Mode:</strong> Zero API quota consumption. Instant local responses.
+                </div>
+                """, unsafe_allow_html=True)
         else:
+            is_live_mode = False
+            st.session_state["backend_exec_mode"] = "Offline Demonstration (Zero Quota)"
             st.markdown("""
-            <div style="font-size:0.8rem; background:#F1F5F9; border:1px solid #CBD5E1; padding:0.5rem; border-radius:6px; color:#475569;">
-                <strong>🧪 Offline Demo Mode:</strong> Zero API quota consumption. Instant local responses.
+            <div style="font-size:0.82rem; background:#F1F5F9; border:1px solid #CBD5E1; padding:0.6rem 0.75rem; border-radius:6px; color:#334155;">
+                <div style="font-weight:600; color:#1E293B; margin-bottom:2px;">🧪 Public Demonstration Mode</div>
+                <div>All features operate in deterministic <strong>Offline Demonstration mode</strong> with verified lecture content. Live generation is disabled in public deployment to protect API quotas.</div>
             </div>
             """, unsafe_allow_html=True)
 
@@ -451,16 +464,39 @@ def main():
     </div>
     """, unsafe_allow_html=True)
 
-    # Render Local WebM Video Player with Native Seek Time
+    # Render Local WebM / MP4 Video Player with Native Seek Time
+    sample_video_path = config.VIDEOS_DIR / "demo_sample_lecture.mp4"
     if full_video_path.exists():
         seek_sec = int(st.session_state.get("seek_time", 0))
         st.video(
             str(full_video_path),
-            format="video/webm",
+            format="video/webm" if str(full_video_path).endswith(".webm") else "video/mp4",
             start_time=seek_sec
         )
+    elif sample_video_path.exists():
+        seek_sec = int(st.session_state.get("seek_time", 0))
+        st.video(
+            str(sample_video_path),
+            format="video/mp4",
+            start_time=seek_sec
+        )
+        st.caption("🎬 *Interactive Demonstration Video: Clickable timestamp seek buttons (`🎯 Seek to [MM:SS]`) dynamically cue this player.*")
     else:
-        st.warning(f"⚠️ Video file not found on disk at: `{full_video_path}`")
+        seek_sec = int(st.session_state.get("seek_time", 0))
+        seek_m = int(seek_sec // 60)
+        seek_s = int(seek_sec % 60)
+        st.markdown(f"""
+        <div style="background:#1E293B; border:1px solid #334155; border-radius:8px; padding:1.25rem; text-align:center; color:#F8FAFC; margin-bottom:1rem;">
+            <div style="font-size:1.8rem; margin-bottom:0.25rem;">🎬</div>
+            <strong style="font-size:1rem; color:#F8FAFC;">{current_lec.get('lecture_title', '').split('|')[0].strip()}</strong>
+            <p style="font-size:0.8rem; color:#94A3B8; margin:0.35rem 0 0.75rem 0;">
+                Full lecture video excluded from repository for lightweight cloud deployment.
+            </p>
+            <div style="display:inline-block; background:#0F172A; border:1px solid #38BDF8; padding:0.35rem 0.85rem; border-radius:16px; font-size:0.8rem; color:#38BDF8;">
+                ⏱️ Active Timestamp Position: <strong>{seek_m:02d}:{seek_s:02d}</strong> ({seek_sec}s)
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
     # -------------------------------------------------------------------------
     # D. Feature Tabs: Ask AI, Smart Notes, Practice Quiz

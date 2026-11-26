@@ -20,7 +20,7 @@ from vector_store import VectorStore
 from llm import LLMClient, LLMGenerationResult
 from prompts import format_context_for_llm, validate_grounded_response
 
-VALID_LECTURES = {"LEC_01", "LEC_02", "LEC_03"}
+VALID_LECTURES = {"LEC_01", "LEC_02", "LEC_03", "DEMO_01"}
 
 
 class RAGPipeline:

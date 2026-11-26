@@ -24,7 +24,7 @@ __pycache__/
 .coverage
 htmlcov/
 
-# Local Video & Audio Binaries (Do not redistribute)
+# Local Video & Audio Binaries (Do not redistribute third-party content)
 data/videos/*.mp4
 data/videos/*.webm
 data/videos/*.mkv
@@ -34,6 +34,8 @@ data/audio/*.m4a
 *.zip
 *.tar.gz
 *.7z
+# Allow lightweight synthetic demonstration video
+!data/videos/demo_sample_lecture.mp4
 
 # Third-Party Copyrighted Educational Material (CodeWithHarry Sigma Course)
 data/transcripts/SEO*
@@ -55,11 +57,19 @@ data/vector_store/*_analysis.json
 data/vector_store/live_*.json
 data/vector_store/smoke_*.json
 
-# Generated Embeddings & Vector Index Binary Files
+# Generated Embeddings & Vector Index Binary Files (Exclude large/production indices)
 data/vector_store/*.index
 data/vector_store/*.faiss
+data/vector_store/embeddings.npy
+
 data/vector_store/*.npy
 data/vector_store/*.pkl
+
+# Allow lightweight authorized demonstration FAISS index & metadata (< 25 KB)
+!data/vector_store/chunk_metadata.json
+!data/vector_store/embeddings.npy
+!data/vector_store/faiss.index
+!data/vector_store/index_manifest.json
 
 # Model Caches
 .cache/
