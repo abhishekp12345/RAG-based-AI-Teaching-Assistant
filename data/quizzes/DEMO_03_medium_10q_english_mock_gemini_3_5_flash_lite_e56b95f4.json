@@ -126,19 +126,19 @@
       "id": 7
     },
     {
-      "question": "In Google Core Web Vitals, what interaction does First Input Delay (FID) measure?",
+      "question": "In Google Core Web Vitals, which metric replaced First Input Delay (FID) in March 2024, and what is its target threshold?",
       "options": [
-        "The delay between a user's first input interaction and browser main-thread event handling",
-        "The time taken to establish an HTTPS handshake",
-        "The total frame rate rendering latency during scrolling",
-        "The duration required to load background web workers"
+        "Interaction to Next Paint (INP) with a threshold of <= 200 milliseconds",
+        "First Contentful Paint (FCP) with a threshold of <= 1.0 second",
+        "Time to Interactive (TTI) with a threshold of <= 3.8 seconds",
+        "Total Blocking Time (TBT) with a threshold of <= 100 milliseconds"
       ],
       "correct_index": 0,
-      "explanation": "FID quantifies responsiveness by timing the pause before the browser begins processing the user's initial tap or click.",
-      "topic": "FID Interactivity",
-      "timestamp_ref": "00:07:25",
+      "explanation": "In March 2024, Google officially replaced FID with Interaction to Next Paint (INP) as a Core Web Vital to measure the responsiveness of all clicks, taps, and keypresses with a recommended target of <= 200ms.",
+      "topic": "INP Responsiveness",
+      "timestamp_ref": "00:02:24",
       "supporting_chunk_ids": [
-        "DEMO_03_CHK_0003"
+        "DEMO_03_CHK_0009"
       ],
       "id": 8
     },
@@ -177,7 +177,7 @@
       "id": 10
     }
   ],
-  "generated_at": 1795674867.8863976,
+  "generated_at": 1795676031.0601714,
   "is_mock": true,
   "is_cached": false
 }

@@ -215,13 +215,13 @@ class LectureSummarizer:
                 summary = (
                     "इस लेक्चर में हमने सीखा कि सर्च इंजन ऑप्टिमाइज़ेशन (SEO) क्या होता है और वेब पेजों को सर्च इंजन में उच्च रैंक दिलाने के लिए "
                     "HTML मेटा टैग्स, व्यूपोर्ट, और इमेज ऑल्ट एट्रिब्यूट्स का सही उपयोग कैसे किया जाता है। "
-                    "साथ ही Chrome DevTools में Google Lighthouse की मदद से Core Web Vitals (LCP, FID, CLS) का प्रदर्शन मापना सीखा।"
+                    "साथ ही Chrome DevTools में Google Lighthouse की मदद से Core Web Vitals (LCP, INP, CLS) का प्रदर्शन मापना सीखा।"
                 )
                 objectives = [
                     "सर्च इंजन ऑप्टिमाइज़ेशन (SEO) और ऑन-पेज HTML तकनीकों को समझना",
                     "<meta> टैग्स (description, keywords, viewport) का सही विन्यास करना",
                     "Google Chrome Lighthouse टूल का उपयोग करके वेबसाइट ऑडिट करना",
-                    "Core Web Vitals के तीन मुख्य स्तंभों (LCP, FID, CLS) को समझना और सुधारना"
+                    "Core Web Vitals के तीन मुख्य स्तंभों (LCP, INP, CLS) को समझना और सुधारना"
                 ]
                 sec1_head = "1. SEO मूल बातें और महत्वपूर्ण मेटा टैग्स"
                 sec1_content = (
@@ -234,41 +234,42 @@ class LectureSummarizer:
                     "Google Chrome DevTools का Lighthouse पैनल वेबसाइट की परफॉरमेंस, एक्सेसिबिलिटी, बेस्ट प्रैक्टिसेज और SEO का व्यापक स्कोर देता है। "
                     "यह अनऑप्टिमाइज़्ड इमेजेस और धीमे रेंडर-ब्लॉकिंग संसाधनों की पहचान करता है।"
                 )
-                sec3_head = "3. Core Web Vitals (LCP, FID, CLS)"
+                sec3_head = "3. Core Web Vitals (LCP, INP, CLS)"
                 sec3_content = (
                     "Core Web Vitals उपयोगकर्ता अनुभव के तीन महत्वपूर्ण पहलू मापते हैं:\n"
                     "- LCP (Largest Contentful Paint): मुख्य सामग्री लोड होने का समय (2.5 सेकंड से कम आदर्श)।\n"
-                    "- FID (First Input Delay): पहले इंटरैक्शन पर रिस्पॉन्स में देरी (100ms से कम आदर्श)।\n"
+                    "- INP (Interaction to Next Paint): सभी यूजर इंटरैक्शन (क्लिक/टाइपिंग) पर रिस्पॉन्स में देरी (200ms से कम आदर्श; मार्च 2024 में FID के स्थान पर लागू)।\n"
                     "- CLS (Cumulative Layout Shift): अनपेक्षित लेआउट बदलाव (0.1 से कम आदर्श)।"
                 )
                 terms = [
                     {"term": "SEO", "definition": "सर्च इंजन ऑप्टिमाइज़ेशन: सर्च इंजन में वेबसाइट की विजिबिलिटी बढ़ाने की प्रक्रिया।", "timestamp_ref": "00:00:15"},
-                    {"term": "LCP", "definition": "Largest Contentful Paint: वेबपेज पर सबसे बड़े कंटेंट ब्लॉक के लोड होने का समय।", "timestamp_ref": "00:05:40"},
-                    {"term": "CLS", "definition": "Cumulative Layout Shift: पेज लोड होते समय एलिमेंट्स का अनचाहा खिसकना।", "timestamp_ref": "00:08:12"}
+                    {"term": "LCP", "definition": "Largest Contentful Paint: वेबपेज पर सबसे बड़े कंटेंट ब्लॉक के लोड होने का समय।", "timestamp_ref": "00:02:06"},
+                    {"term": "INP", "definition": "Interaction to Next Paint: यूजर इंटरैक्शन पर समग्र लेटेंसी (200ms से कम)।", "timestamp_ref": "00:02:24"},
+                    {"term": "CLS", "definition": "Cumulative Layout Shift: पेज लोड होते समय एलिमेंट्स का अनचाहा खिसकना।", "timestamp_ref": "00:02:42"}
                 ]
                 pitfalls = [
                     "<meta name='viewport'> छोड़ देना, जिससे मोबाइल पर पेज ज़ूम-आउट और अनरेस्पॉन्सिव दिखता है।",
                     "<img> टैग में width और height न देना, जिससे इमेज लोड होते ही CLS (लेआउट शिफ्ट) होता है।",
-                    "कीवर्ड स्टफिंग करना, जिससे सर्च इंजन पेज पर पेनल्टी लगा सकते हैं।"
+                    "लंबी JavaScript स्क्रिप्ट्स चलाना जो मुख्य थ्रेड को ब्लॉक करके INP लेटेंसी बढ़ाती हैं।"
                 ]
                 checklist = [
                     "क्या आपने <head> में <meta name='description'> जोड़ा है?",
                     "क्या मोबाइल फ्रेंडली viewport टैग मौजूद है?",
                     "क्या सभी इमेजेस में वर्णनात्मक alt एट्रिब्यूट मौजूद है?",
                     "क्या Lighthouse ऑडिट में SEO स्कोर 90+ प्राप्त हुआ है?",
-                    "क्या LCP 2.5 सेकंड से कम समय में लोड हो रहा है?"
+                    "क्या LCP 2.5s और INP 200ms के भीतर अनुकूलित हैं?"
                 ]
             elif language == "Hinglish":
                 summary = (
                     "Is lecture mein humne seekha ki Search Engine Optimization (SEO) kya hota hai aur websites ko search engines par rank karne ke liye "
                     "HTML meta tags, viewport settings, aur image alt attributes kaise configure karte hain. "
-                    "Humne Chrome DevTools ke Google Lighthouse tool se website audit karna aur Core Web Vitals (LCP, FID, CLS) optimize karna bhi seekha."
+                    "Humne Chrome DevTools ke Google Lighthouse tool se website audit karna aur Core Web Vitals (LCP, INP, CLS) optimize karna bhi seekha."
                 )
                 objectives = [
                     "SEO fundamentals aur on-page meta tag strategies samajhna",
                     "<meta> description aur mobile viewport tags implement karna",
                     "Chrome DevTools Lighthouse panel se performance audit run karna",
-                    "Core Web Vitals metrics (LCP, FID, CLS) ke thresholds optimize karna"
+                    "Core Web Vitals metrics (LCP, INP, CLS) ke thresholds optimize karna"
                 ]
                 sec1_head = "1. SEO Fundamentals & Essential Meta Tags"
                 sec1_content = (
@@ -281,42 +282,43 @@ class LectureSummarizer:
                     "Chrome DevTools ke andar Lighthouse tab se hum 4 categories check karte hain: Performance, Accessibility, Best Practices, aur SEO. "
                     "Lighthouse audit se heavy images aur slow resources ka pata lagta hai."
                 )
-                sec3_head = "3. Core Web Vitals (LCP, FID, CLS)"
+                sec3_head = "3. Core Web Vitals (LCP, INP, CLS)"
                 sec3_content = (
                     "Core Web Vitals user experience ke 3 core dimensions measure karte hain:\n"
                     "- LCP (Largest Contentful Paint): Largest visible content load hone ka time (< 2.5s is good).\n"
-                    "- FID (First Input Delay): User ke first click/tap par responsiveness (< 100ms is good).\n"
+                    "- INP (Interaction to Next Paint): Page par user clicks/taps ki overall responsiveness (< 200ms is good; March 2024 me FID ki jagah aaya).\n"
                     "- CLS (Cumulative Layout Shift): Content ka sudden unexpected shift (< 0.1 is good)."
                 )
                 terms = [
                     {"term": "SEO", "definition": "Search Engine Optimization: Google par website rank karane ki technique.", "timestamp_ref": "00:00:15"},
-                    {"term": "LCP", "definition": "Largest Contentful Paint: Page ka main hero content render hone ka time.", "timestamp_ref": "00:05:40"},
-                    {"term": "CLS", "definition": "Cumulative Layout Shift: Loading ke dauran visual stability ka score.", "timestamp_ref": "00:08:12"}
+                    {"term": "LCP", "definition": "Largest Contentful Paint: Page ka main hero content render hone ka time.", "timestamp_ref": "00:02:06"},
+                    {"term": "INP", "definition": "Interaction to Next Paint: Clicks aur keystrokes par UI responsiveness latency (< 200ms).", "timestamp_ref": "00:02:24"},
+                    {"term": "CLS", "definition": "Cumulative Layout Shift: Loading ke dauran visual stability ka score.", "timestamp_ref": "00:02:42"}
                 ]
                 pitfalls = [
                     "Viewport meta tag bhool jana jisse mobile screen par layout shrink ho jata hai.",
                     "Images ke explicit width/height dimensions omit karna jisse CLS score drop hota hai.",
-                    "Repetitive keyword stuffing karna jo Google algorithms detect karke penalize karte hain."
+                    "Long blocking JavaScript tasks run karna jo INP latency ko 200ms se upar le jati hain."
                 ]
                 checklist = [
                     "Head tag mein meta description added hai?",
                     "Responsive viewport meta tag correctly defined hai?",
                     "Sabhi images par meaningful alt text diya hai?",
                     "Lighthouse SEO score 90+ achieve hua hai?",
-                    "LCP timing 2.5s ke under optimize hui hai?"
+                    "LCP <= 2.5s aur INP <= 200ms optimize hui hai?"
                 ]
             else:  # English
                 summary = (
                     "This lecture explores Search Engine Optimization (SEO) principles and performance auditing in modern HTML. "
                     "It covers essential <head> metadata including viewport, description, and Open Graph tags, alongside practical auditing "
-                    "with Google Chrome Lighthouse. Key web performance metrics known as Core Web Vitals (LCP, FID, and CLS) are demystified "
+                    "with Google Chrome Lighthouse. Key web performance metrics known as Core Web Vitals (LCP, INP, and CLS) are demystified "
                     "with actionable optimization strategies."
                 )
                 objectives = [
                     "Master on-page HTML SEO foundations and search engine indexing mechanics",
                     "Properly configure essential <meta> tags including description and responsive viewport",
                     "Execute performance, accessibility, and SEO audits using Chrome DevTools Lighthouse",
-                    "Understand and optimize Core Web Vitals metrics: LCP, FID, and CLS"
+                    "Understand and optimize Core Web Vitals metrics: LCP, INP (which replaced FID in March 2024), and CLS"
                 ]
                 sec1_head = "1. SEO Foundations & Essential Meta Tags"
                 sec1_content = (
@@ -330,29 +332,30 @@ class LectureSummarizer:
                     "Performance, Accessibility, Best Practices, and SEO. It highlights opportunities like unoptimized image formats "
                     "and render-blocking scripts."
                 )
-                sec3_head = "3. Core Web Vitals (LCP, FID, CLS)"
+                sec3_head = "3. Core Web Vitals (LCP, INP, CLS)"
                 sec3_content = (
                     "Google Core Web Vitals assess real-world user experience across three essential vectors:\n"
                     "- LCP (Largest Contentful Paint): Measures perceived loading speed (Ideal: <= 2.5 seconds).\n"
-                    "- FID (First Input Delay): Measures interactivity and input latency (Ideal: <= 100 milliseconds).\n"
+                    "- INP (Interaction to Next Paint): Measures overall responsiveness to all user clicks, taps, and keypresses (Ideal: <= 200 milliseconds; replaced FID as an official Core Web Vital in March 2024).\n"
                     "- CLS (Cumulative Layout Shift): Quantifies visual stability and jarring content jumps (Ideal: <= 0.1)."
                 )
                 terms = [
                     {"term": "SEO", "definition": "Search Engine Optimization: Techniques used to increase organic search engine visibility.", "timestamp_ref": "00:00:15"},
-                    {"term": "LCP", "definition": "Largest Contentful Paint: Time taken to render the largest visible DOM content block.", "timestamp_ref": "00:05:40"},
-                    {"term": "CLS", "definition": "Cumulative Layout Shift: Metric quantifying unexpected layout shifts during page lifecycle.", "timestamp_ref": "00:08:12"}
+                    {"term": "LCP", "definition": "Largest Contentful Paint: Time taken to render the largest visible DOM content block (<= 2.5s).", "timestamp_ref": "00:02:06"},
+                    {"term": "INP", "definition": "Interaction to Next Paint: Latency of user interactions (<= 200ms; replaced FID in March 2024).", "timestamp_ref": "00:02:24"},
+                    {"term": "CLS", "definition": "Cumulative Layout Shift: Metric quantifying unexpected layout shifts during page lifecycle (<= 0.1).", "timestamp_ref": "00:02:42"}
                 ]
                 pitfalls = [
                     "Omitting the viewport meta tag, causing mobile browsers to render desktop layouts at 980px.",
                     "Failing to declare width and height on <img> elements, leading to high Cumulative Layout Shift (CLS).",
-                    "Keyword stuffing in meta descriptions instead of writing compelling, human-readable summaries."
+                    "Executing long monolithic JavaScript tasks on the main thread, resulting in sluggish INP (> 200ms)."
                 ]
                 checklist = [
                     "Is the <meta name='description'> concise and under 160 characters?",
                     "Is the responsive <meta name='viewport'> tag present in <head>?",
                     "Do all <img> tags include descriptive alt attributes and explicit dimensions?",
                     "Does the page score 90+ on Chrome DevTools Lighthouse SEO audit?",
-                    "Is Largest Contentful Paint (LCP) verified under 2.5 seconds?"
+                    "Are Largest Contentful Paint (LCP <= 2.5s) and Interaction to Next Paint (INP <= 200ms) verified?"
                 ]
 
             sections = [

@@ -1,0 +1,183 @@
+{
+  "quiz_id": "QUIZ_DEMO_03_MEDIUM_10Q",
+  "lecture_id": "DEMO_03",
+  "lecture_title": "SEO & Core Web Vitals",
+  "difficulty": "Medium",
+  "num_questions": 10,
+  "language": "Hinglish",
+  "questions": [
+    {
+      "question": "Mobile devices par responsive design ensure karne ke liye <head> mein kaunsa meta tag add karna zaroori hai?",
+      "options": [
+        "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+        "<meta name='mobile' content='responsive=true'>",
+        "<meta http-equiv='screen' content='device-width'>",
+        "<meta name='layout' content='fluid'>"
+      ],
+      "correct_index": 0,
+      "explanation": "Viewport tag browser ko screen width ke hisab se layout adjust karne ka command deta hai.",
+      "topic": "Responsive Viewport",
+      "timestamp_ref": "00:01:15",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0001"
+      ],
+      "id": 1
+    },
+    {
+      "question": "Google search results page par website title ke niche jo text snippet dikhta hai wo kis tag se define hota hai?",
+      "options": [
+        "<meta name='summary' content='...'>",
+        "<meta name='description' content='...'>",
+        "<meta name='snippet' content='...'>",
+        "<meta name='info' content='...'>"
+      ],
+      "correct_index": 1,
+      "explanation": "<meta name='description'> search results mein preview description provide karta hai.",
+      "topic": "SEO Meta Tags",
+      "timestamp_ref": "00:02:40",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0002"
+      ],
+      "id": 2
+    },
+    {
+      "question": "Core Web Vitals metric LCP (Largest Contentful Paint) exactly kya measure karta hai?",
+      "options": [
+        "Server se pehla byte aane ka time (TTFB)",
+        "Page ka largest hero content render hone ka time",
+        "JavaScript execution ka total time",
+        "Unexpected layout shifts ka score"
+      ],
+      "correct_index": 1,
+      "explanation": "LCP screen ke sabse bade visual content block ke render hone ka duration calculate karta hai.",
+      "topic": "LCP Performance",
+      "timestamp_ref": "00:05:40",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0003"
+      ],
+      "id": 3
+    },
+    {
+      "question": "Website par unexpected CLS (Cumulative Layout Shift) aane ka sabse common reason kya hota hai?",
+      "options": [
+        "Images par explicit width aur height na dena",
+        "External CSS stylesheet link karna",
+        "Favicon ka size 16x16 hona",
+        "Emmet shortcut se code likhna"
+      ],
+      "correct_index": 0,
+      "explanation": "Bina dimension wali images load hote waqt content ko neeche push karti hain jisse layout shift hota hai.",
+      "topic": "CLS Visual Stability",
+      "timestamp_ref": "00:08:12",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0004"
+      ],
+      "id": 4
+    },
+    {
+      "question": "Chrome DevTools mein website ki Performance, SEO aur Accessibility ka comprehensive score kaunsa tool deta hai?",
+      "options": [
+        "Console",
+        "Network Tab",
+        "Lighthouse",
+        "Application Tab"
+      ],
+      "correct_index": 2,
+      "explanation": "Lighthouse tool automated audits run karke detailed scores aur improvements provide karta hai.",
+      "topic": "Lighthouse Audits",
+      "timestamp_ref": "00:03:50",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0002"
+      ],
+      "id": 5
+    },
+    {
+      "question": "Google Core Web Vitals ke hisab se ideal LCP time kitna hona chahiye?",
+      "options": [
+        "1.0 second",
+        "2.5 seconds ya usse kam",
+        "4.0 seconds",
+        "100 ms"
+      ],
+      "correct_index": 1,
+      "explanation": "2.5 seconds ke under LCP score ko Google 'Good' status classify karta hai.",
+      "topic": "LCP Thresholds",
+      "timestamp_ref": "00:06:10",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0003"
+      ],
+      "id": 6
+    },
+    {
+      "question": "Image SEO aur screen readers ke liye <img> element par kaunsa attribute mandatory hota hai?",
+      "options": [
+        "title",
+        "alt",
+        "name",
+        "role"
+      ],
+      "correct_index": 1,
+      "explanation": "alt attribute alternative text describe karta hai jo SEO crawlers inspect karte hain.",
+      "topic": "Image SEO & Alt Text",
+      "timestamp_ref": "00:10:05",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0005"
+      ],
+      "id": 7
+    },
+    {
+      "question": "Core Web Vitals mein March 2024 se FID ki jagah kaun sa official interactivity metric introduce kiya gaya hai?",
+      "options": [
+        "INP (Interaction to Next Paint) — Target threshold <= 200ms",
+        "TTFB (Time to First Byte) — Target threshold <= 500ms",
+        "FCP (First Contentful Paint) — Target threshold <= 1.5s",
+        "Speed Index — Target threshold <= 3.0s"
+      ],
+      "correct_index": 0,
+      "explanation": "March 2024 mein Google ne FID ko replace karke INP ko official Core Web Vital banaya jo user interactions (clicks, taps, typing) ki responsiveness 200ms ke under expect karta hai.",
+      "topic": "INP Responsiveness",
+      "timestamp_ref": "00:02:24",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0009"
+      ],
+      "id": 8
+    },
+    {
+      "question": "Social media sharing cards (WhatsApp, Twitter, LinkedIn) customize karne ke liye konse meta tags use hote hain?",
+      "options": [
+        "Bootstrap metadata",
+        "Open Graph (og:) tags",
+        "Favicon tags",
+        "Google Ads tags"
+      ],
+      "correct_index": 1,
+      "explanation": "Open Graph protocol tags (og:image, og:title) link previews generate karte hain.",
+      "topic": "Social Media Meta Tags",
+      "timestamp_ref": "00:04:30",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0002"
+      ],
+      "id": 9
+    },
+    {
+      "question": "Browser tab par website icon lagane ke liye standard syntax kya hai?",
+      "options": [
+        "<link rel='icon' type='image/x-icon' href='favicon.ico'>",
+        "<meta src='favicon.ico'>",
+        "<icon file='favicon.ico'>",
+        "<img rel='icon' src='favicon.ico'>"
+      ],
+      "correct_index": 0,
+      "explanation": "<link rel='icon'> se browser tab par favicon render hota hai.",
+      "topic": "Favicon Setup",
+      "timestamp_ref": "00:09:15",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0004"
+      ],
+      "id": 10
+    }
+  ],
+  "generated_at": 1795675901.6228602,
+  "is_mock": true,
+  "is_cached": false
+}

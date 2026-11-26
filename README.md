@@ -1,6 +1,7 @@
 # LearnMate AI
 ### A RAG-Based AI Teaching Assistant for Interactive Video Learning
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-learnmate--ai--rag.streamlit.app-FF4B4B?style=for-the-badge&logo=streamlit)](https://learnmate-ai-rag.streamlit.app)
 [![Application Framework](https://img.shields.io/badge/Framework-Streamlit-red?style=flat&logo=streamlit)](https://streamlit.io/)
 [![API Free-Tier Budget](https://img.shields.io/badge/Evaluation_API_Spend-%E2%82%B90.00_/_$0.00-blue?style=flat)](docs/DEPLOYMENT_GUIDE.md)
 [![LLM Resilience](https://img.shields.io/badge/LLM_Resilience-Dual--Model_Fallback-orange?style=flat)](docs/ARCHITECTURE.md)
@@ -8,6 +9,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **PhysicsWallah APM Builder Screening Project**  
+*Live Application: [https://learnmate-ai-rag.streamlit.app](https://learnmate-ai-rag.streamlit.app)*  
 *GitHub: @abhishekp12345*  
 *Repository: `https://github.com/abhishekp12345/RAG-based-AI-Teaching-Assistant`*  
 *Project Status: Working Educational Prototype & Screening MVP*
@@ -65,7 +67,7 @@ LearnMate AI transforms passive video consumption into an active, verified, and 
 | Persona | Background & Goals | Key Pain Points | LearnMate AI Value |
 |---|---|---|---|
 | **Aarav (Beginner Learner)** | 1st-year college student learning HTML/CSS from Hindi/Hinglish lectures. | Gets stuck on tag syntax (e.g. `<img>` alt tags, `<!DOCTYPE html>`); English docs feel intimidating. | Answers doubts in natural conversational Hinglish or Hindi, linking directly to the instructor's spoken explanation. |
-| **Priya (Exam Aspirant)** | Job seeker preparing for frontend interviews on a tight deadline. | Cannot spend 45 minutes re-watching a video to recall Core Web Vitals (LCP vs. CLS). | Generates **Quick Revision** notes and diagnostic **Practice Quizzes** with instant topic weakness analysis. |
+| **Priya (Exam Aspirant)** | Job seeker preparing for frontend interviews on a tight deadline. | Cannot spend 45 minutes re-watching a video to recall Core Web Vitals (LCP vs. INP vs. CLS). | Generates **Quick Revision** notes and diagnostic **Practice Quizzes** with instant topic weakness analysis. |
 | **Rohan (Teaching Assistant)** | Community mentor managing thousands of student doubt threads. | Answers the same repetitive syntax questions repeatedly, causing burnout. | Automates 85%+ of repetitive curriculum queries, freeing human mentors for complex architecture doubts. |
 
 ---
@@ -330,7 +332,7 @@ This repository includes a complete, original, and permissive 3-lecture educatio
 |---|---|---|---|---|---|
 | **DEMO_01** | *Your First HTML Website* | 04:12 (252s) | 14 | HTML5 Doctype, document skeleton, head/body, headings `<h1>-<h6>`, paragraphs, anchor links, and images | `lecture_01_html_fundamentals.mp4` |
 | **DEMO_02** | *Video, Audio & Media in HTML* | 04:12 (252s) | 14 | Native `<video>` / `<audio>` elements, controls, muted autoplay policies, loop, poster images, format fallbacks, and `<iframe>` | `lecture_02_html_multimedia.mp4` |
-| **DEMO_03** | *SEO & Core Web Vitals* | 04:12 (252s) | 14 | Search Engine Optimization, meta description, viewport, Google Lighthouse audits, and Core Web Vitals (LCP, FID, CLS) | `lecture_03_seo_core_web_vitals.mp4` |
+| **DEMO_03** | *SEO & Core Web Vitals* | 04:12 (252s) | 14 | Search Engine Optimization, meta description, viewport, Google Lighthouse audits, and Core Web Vitals (LCP, INP, CLS) | `lecture_03_seo_core_web_vitals.mp4` |
 
 To ingest your own additional lecture videos or re-process authorized course lectures from scratch, follow this end-to-end pipeline:
 

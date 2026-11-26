@@ -3,12 +3,12 @@
   "lecture_title": "SEO & Core Web Vitals",
   "notes_style": "detailed_study",
   "language": "Hinglish",
-  "executive_summary": "Is lecture mein humne seekha ki Search Engine Optimization (SEO) kya hota hai aur websites ko search engines par rank karne ke liye HTML meta tags, viewport settings, aur image alt attributes kaise configure karte hain. Humne Chrome DevTools ke Google Lighthouse tool se website audit karna aur Core Web Vitals (LCP, FID, CLS) optimize karna bhi seekha.",
+  "executive_summary": "Is lecture mein humne seekha ki Search Engine Optimization (SEO) kya hota hai aur websites ko search engines par rank karne ke liye HTML meta tags, viewport settings, aur image alt attributes kaise configure karte hain. Humne Chrome DevTools ke Google Lighthouse tool se website audit karna aur Core Web Vitals (LCP, INP, CLS) optimize karna bhi seekha.",
   "learning_objectives": [
     "SEO fundamentals aur on-page meta tag strategies samajhna",
     "<meta> description aur mobile viewport tags implement karna",
     "Chrome DevTools Lighthouse panel se performance audit run karna",
-    "Core Web Vitals metrics (LCP, FID, CLS) ke thresholds optimize karna"
+    "Core Web Vitals metrics (LCP, INP, CLS) ke thresholds optimize karna"
   ],
   "sections": [
     {
@@ -58,8 +58,8 @@
       ]
     },
     {
-      "heading": "3. Core Web Vitals (LCP, FID, CLS)",
-      "content": "Core Web Vitals user experience ke 3 core dimensions measure karte hain:\n- LCP (Largest Contentful Paint): Largest visible content load hone ka time (< 2.5s is good).\n- FID (First Input Delay): User ke first click/tap par responsiveness (< 100ms is good).\n- CLS (Cumulative Layout Shift): Content ka sudden unexpected shift (< 0.1 is good).",
+      "heading": "3. Core Web Vitals (LCP, INP, CLS)",
+      "content": "Core Web Vitals user experience ke 3 core dimensions measure karte hain:\n- LCP (Largest Contentful Paint): Largest visible content load hone ka time (< 2.5s is good).\n- INP (Interaction to Next Paint): Page par user clicks/taps ki overall responsiveness (< 200ms is good; March 2024 me FID ki jagah aaya).\n- CLS (Cumulative Layout Shift): Content ka sudden unexpected shift (< 0.1 is good).",
       "code_snippets": [
         "<!-- Prevent CLS by reserving aspect-ratio or dimensions -->\n<img src=\"hero.jpg\" alt=\"Tutorial Hero\" width=\"800\" height=\"450\" loading=\"lazy\">"
       ],
@@ -90,27 +90,32 @@
     {
       "term": "LCP",
       "definition": "Largest Contentful Paint: Page ka main hero content render hone ka time.",
-      "timestamp_ref": "00:05:40"
+      "timestamp_ref": "00:02:06"
+    },
+    {
+      "term": "INP",
+      "definition": "Interaction to Next Paint: Clicks aur keystrokes par UI responsiveness latency (< 200ms).",
+      "timestamp_ref": "00:02:24"
     },
     {
       "term": "CLS",
       "definition": "Cumulative Layout Shift: Loading ke dauran visual stability ka score.",
-      "timestamp_ref": "00:08:12"
+      "timestamp_ref": "00:02:42"
     }
   ],
   "common_pitfalls": [
     "Viewport meta tag bhool jana jisse mobile screen par layout shrink ho jata hai.",
     "Images ke explicit width/height dimensions omit karna jisse CLS score drop hota hai.",
-    "Repetitive keyword stuffing karna jo Google algorithms detect karke penalize karte hain."
+    "Long blocking JavaScript tasks run karna jo INP latency ko 200ms se upar le jati hain."
   ],
   "revision_checklist": [
     "Head tag mein meta description added hai?",
     "Responsive viewport meta tag correctly defined hai?",
     "Sabhi images par meaningful alt text diya hai?",
     "Lighthouse SEO score 90+ achieve hua hai?",
-    "LCP timing 2.5s ke under optimize hui hai?"
+    "LCP <= 2.5s aur INP <= 200ms optimize hui hai?"
   ],
-  "generated_at": 1795674867.8697996,
+  "generated_at": 1795676031.0557837,
   "is_mock": true,
   "is_cached": false
 }

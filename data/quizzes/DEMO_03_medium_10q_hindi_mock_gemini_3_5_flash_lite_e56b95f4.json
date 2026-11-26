@@ -1,0 +1,183 @@
+{
+  "quiz_id": "QUIZ_DEMO_03_MEDIUM_10Q",
+  "lecture_id": "DEMO_03",
+  "lecture_title": "SEO & Core Web Vitals",
+  "difficulty": "Medium",
+  "num_questions": 10,
+  "language": "Hindi",
+  "questions": [
+    {
+      "question": "मोबाइल और विभिन्न स्क्रीन आकारों पर उत्तरदायी (responsive) रेंडरिंग के लिए कौन सा मेटा टैग अनिवार्य है?",
+      "options": [
+        "<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+        "<meta name='screen' content='responsive=true'>",
+        "<meta http-equiv='mobile-render' content='auto'>",
+        "<meta name='layout' content='fluid'>"
+      ],
+      "correct_index": 0,
+      "explanation": "Viewport मेटा टैग ब्राउज़र को डिवाइस की चौड़ाई के अनुसार पेज का दृश्य क्षेत्र स्केल करने का निर्देश देता है।",
+      "topic": "Responsive Viewport",
+      "timestamp_ref": "00:01:15",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0001"
+      ],
+      "id": 1
+    },
+    {
+      "question": "Google खोज परिणामों में वेबपेज के नीचे दिखने वाला संक्षिप्त विवरण किस टैग द्वारा परिभाषित होता है?",
+      "options": [
+        "<meta name='summary' content='...'>",
+        "<meta name='description' content='...'>",
+        "<meta name='snippet' content='...'>",
+        "<title description='...'>"
+      ],
+      "correct_index": 1,
+      "explanation": "<meta name='description'> सर्च रिजल्ट्स में दिखने वाला आधिकारिक स्निपेट तय करता है।",
+      "topic": "SEO Meta Tags",
+      "timestamp_ref": "00:02:40",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0002"
+      ],
+      "id": 2
+    },
+    {
+      "question": "Google Core Web Vitals में LCP (Largest Contentful Paint) क्या मापता है?",
+      "options": [
+        "पेज पर पहला बाइट प्राप्त होने का समय",
+        "पेज के सबसे बड़े मुख्य कंटेंट ब्लॉक के रेंडर होने का समय",
+        "JavaScript फाइलों के निष्पादन की कुल गति",
+        "लेआउट में अनचाहे बदलाव की आवृत्ति"
+      ],
+      "correct_index": 1,
+      "explanation": "LCP पेज पर सबसे बड़े दृश्यमान कंटेंट (जैसे हीरो इमेज या बड़ा हेडिंग ब्लॉक) लोड होने का समय मापता है।",
+      "topic": "LCP Performance",
+      "timestamp_ref": "00:05:40",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0003"
+      ],
+      "id": 3
+    },
+    {
+      "question": "वेबसाइट पर Cumulative Layout Shift (CLS) का मुख्य कारण क्या होता है?",
+      "options": [
+        "इमेजेस और विज्ञापनों में स्पष्ट width और height आयाम न होना",
+        "Google Fonts का उपयोग करना",
+        "वीडियो पर autoplay एट्रिब्यूट लगाना",
+        "मेटा टैग्स में कीवर्ड्स न लिखना"
+      ],
+      "correct_index": 0,
+      "explanation": "जब इमेजेस में width और height नहीं होते, तो वे लोड होते समय नीचे के कंटेंट को अचानक धकेल देती हैं जिससे CLS बढ़ता है।",
+      "topic": "CLS Visual Stability",
+      "timestamp_ref": "00:08:12",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0004"
+      ],
+      "id": 4
+    },
+    {
+      "question": "Google Chrome DevTools में वेबसाइट की परफॉरमेंस, एक्सेसिबिलिटी और SEO ऑडिट करने के लिए कौन सा टूल इन-बिल्ट है?",
+      "options": [
+        "Network Tab",
+        "Console",
+        "Lighthouse",
+        "Memory Profiler"
+      ],
+      "correct_index": 2,
+      "explanation": "Chrome DevTools का Lighthouse पैनल संपूर्ण वेबसाइट की परफॉरमेंस और SEO का स्कोर 100 में से देता है।",
+      "topic": "Lighthouse Audits",
+      "timestamp_ref": "00:03:50",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0002"
+      ],
+      "id": 5
+    },
+    {
+      "question": "एक उत्कृष्ट उपयोगकर्ता अनुभव के लिए Google द्वारा अनुशंसित LCP की अधिकतम सीमा क्या है?",
+      "options": [
+        "1.0 सेकंड",
+        "2.5 सेकंड या उससे कम",
+        "5.0 सेकंड",
+        "100 मिलीसेकंड"
+      ],
+      "correct_index": 1,
+      "explanation": "Google Core Web Vitals के अनुसार 2.5 सेकंड या उससे कम का LCP 'Good' माना जाता है।",
+      "topic": "LCP Thresholds",
+      "timestamp_ref": "00:06:10",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0003"
+      ],
+      "id": 6
+    },
+    {
+      "question": "सर्च इंजन क्रॉलर्स के लिए <img> टैग का कौन सा एट्रिब्यूट सबसे महत्वपूर्ण माना जाता है?",
+      "options": [
+        "title",
+        "alt",
+        "class",
+        "id"
+      ],
+      "correct_index": 1,
+      "explanation": "alt (alternative text) इमेज की सामग्री का वर्णन करता है जो SEO और स्क्रीन रीडर्स दोनों के लिए महत्वपूर्ण है।",
+      "topic": "Image SEO & Alt Text",
+      "timestamp_ref": "00:10:05",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0005"
+      ],
+      "id": 7
+    },
+    {
+      "question": "Google Core Web Vitals में मार्च 2024 से FID के स्थान पर कौन सा नया आधिकारिक इंटरैक्टिविटी मीट्रिक लागू किया गया है और इसकी अनुशंसित सीमा क्या है?",
+      "options": [
+        "INP (Interaction to Next Paint) — 200 मिलीसेकंड या उससे कम",
+        "FCP (First Contentful Paint) — 1.8 सेकंड या उससे कम",
+        "TTFB (Time to First Byte) — 800 मिलीसेकंड",
+        "TBT (Total Blocking Time) — 300 मिलीसेकंड"
+      ],
+      "correct_index": 0,
+      "explanation": "Google ने मार्च 2024 में FID को बदलकर INP (Interaction to Next Paint) को आधिकारिक Core Web Vital बनाया, जो सभी यूजर इंटरैक्शन की लेटेंसी मापता है और 200ms से कम होना चाहिए।",
+      "topic": "INP Responsiveness",
+      "timestamp_ref": "00:02:24",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0009"
+      ],
+      "id": 8
+    },
+    {
+      "question": "सोशल मीडिया प्लेटफॉर्म्स पर लिंक शेयर करते समय कार्ड प्रीव्यू को नियंत्रित करने के लिए कौन से टैग्स का उपयोग किया जाता है?",
+      "options": [
+        "Twitter Bootstrap",
+        "Open Graph (og:) meta tags",
+        "Robots.txt",
+        "Sitemap.xml"
+      ],
+      "correct_index": 1,
+      "explanation": "Open Graph टैग्स (og:title, og:image, og:description) सोशल मीडिया पर शेयरिंग कार्ड्स को फॉर्मेट करते हैं।",
+      "topic": "Social Media Meta Tags",
+      "timestamp_ref": "00:04:30",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0002"
+      ],
+      "id": 9
+    },
+    {
+      "question": "ब्राउज़र टैब पर प्रदर्शित होने वाले फेविकॉन (Favicon) को जोड़ने का सही सिंटैक्स क्या है?",
+      "options": [
+        "<link rel='icon' type='image/x-icon' href='favicon.ico'>",
+        "<meta icon='favicon.ico'>",
+        "<favicon src='favicon.ico'></favicon>",
+        "<img type='favicon' src='favicon.ico'>"
+      ],
+      "correct_index": 0,
+      "explanation": "<link rel='icon'> टैग को <head> में फेविकॉन लिंक करने के लिए निर्दिष्ट किया जाता है।",
+      "topic": "Favicon Setup",
+      "timestamp_ref": "00:09:15",
+      "supporting_chunk_ids": [
+        "DEMO_03_CHK_0004"
+      ],
+      "id": 10
+    }
+  ],
+  "generated_at": 1795675901.6219182,
+  "is_mock": true,
+  "is_cached": false
+}

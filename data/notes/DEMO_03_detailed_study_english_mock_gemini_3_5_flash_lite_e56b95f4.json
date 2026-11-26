@@ -3,12 +3,12 @@
   "lecture_title": "SEO & Core Web Vitals",
   "notes_style": "detailed_study",
   "language": "English",
-  "executive_summary": "This lecture explores Search Engine Optimization (SEO) principles and performance auditing in modern HTML. It covers essential <head> metadata including viewport, description, and Open Graph tags, alongside practical auditing with Google Chrome Lighthouse. Key web performance metrics known as Core Web Vitals (LCP, FID, and CLS) are demystified with actionable optimization strategies.",
+  "executive_summary": "This lecture explores Search Engine Optimization (SEO) principles and performance auditing in modern HTML. It covers essential <head> metadata including viewport, description, and Open Graph tags, alongside practical auditing with Google Chrome Lighthouse. Key web performance metrics known as Core Web Vitals (LCP, INP, and CLS) are demystified with actionable optimization strategies.",
   "learning_objectives": [
     "Master on-page HTML SEO foundations and search engine indexing mechanics",
     "Properly configure essential <meta> tags including description and responsive viewport",
     "Execute performance, accessibility, and SEO audits using Chrome DevTools Lighthouse",
-    "Understand and optimize Core Web Vitals metrics: LCP, FID, and CLS"
+    "Understand and optimize Core Web Vitals metrics: LCP, INP (which replaced FID in March 2024), and CLS"
   ],
   "sections": [
     {
@@ -58,8 +58,8 @@
       ]
     },
     {
-      "heading": "3. Core Web Vitals (LCP, FID, CLS)",
-      "content": "Google Core Web Vitals assess real-world user experience across three essential vectors:\n- LCP (Largest Contentful Paint): Measures perceived loading speed (Ideal: <= 2.5 seconds).\n- FID (First Input Delay): Measures interactivity and input latency (Ideal: <= 100 milliseconds).\n- CLS (Cumulative Layout Shift): Quantifies visual stability and jarring content jumps (Ideal: <= 0.1).",
+      "heading": "3. Core Web Vitals (LCP, INP, CLS)",
+      "content": "Google Core Web Vitals assess real-world user experience across three essential vectors:\n- LCP (Largest Contentful Paint): Measures perceived loading speed (Ideal: <= 2.5 seconds).\n- INP (Interaction to Next Paint): Measures overall responsiveness to all user clicks, taps, and keypresses (Ideal: <= 200 milliseconds; replaced FID as an official Core Web Vital in March 2024).\n- CLS (Cumulative Layout Shift): Quantifies visual stability and jarring content jumps (Ideal: <= 0.1).",
       "code_snippets": [
         "<!-- Prevent CLS by reserving aspect-ratio or dimensions -->\n<img src=\"hero.jpg\" alt=\"Tutorial Hero\" width=\"800\" height=\"450\" loading=\"lazy\">"
       ],
@@ -89,28 +89,33 @@
     },
     {
       "term": "LCP",
-      "definition": "Largest Contentful Paint: Time taken to render the largest visible DOM content block.",
-      "timestamp_ref": "00:05:40"
+      "definition": "Largest Contentful Paint: Time taken to render the largest visible DOM content block (<= 2.5s).",
+      "timestamp_ref": "00:02:06"
+    },
+    {
+      "term": "INP",
+      "definition": "Interaction to Next Paint: Latency of user interactions (<= 200ms; replaced FID in March 2024).",
+      "timestamp_ref": "00:02:24"
     },
     {
       "term": "CLS",
-      "definition": "Cumulative Layout Shift: Metric quantifying unexpected layout shifts during page lifecycle.",
-      "timestamp_ref": "00:08:12"
+      "definition": "Cumulative Layout Shift: Metric quantifying unexpected layout shifts during page lifecycle (<= 0.1).",
+      "timestamp_ref": "00:02:42"
     }
   ],
   "common_pitfalls": [
     "Omitting the viewport meta tag, causing mobile browsers to render desktop layouts at 980px.",
     "Failing to declare width and height on <img> elements, leading to high Cumulative Layout Shift (CLS).",
-    "Keyword stuffing in meta descriptions instead of writing compelling, human-readable summaries."
+    "Executing long monolithic JavaScript tasks on the main thread, resulting in sluggish INP (> 200ms)."
   ],
   "revision_checklist": [
     "Is the <meta name='description'> concise and under 160 characters?",
     "Is the responsive <meta name='viewport'> tag present in <head>?",
     "Do all <img> tags include descriptive alt attributes and explicit dimensions?",
     "Does the page score 90+ on Chrome DevTools Lighthouse SEO audit?",
-    "Is Largest Contentful Paint (LCP) verified under 2.5 seconds?"
+    "Are Largest Contentful Paint (LCP <= 2.5s) and Interaction to Next Paint (INP <= 200ms) verified?"
   ],
-  "generated_at": 1795674867.8655312,
+  "generated_at": 1795676031.053757,
   "is_mock": true,
   "is_cached": false
 }

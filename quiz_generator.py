@@ -308,18 +308,18 @@ class QuizGenerator:
                         "supporting_chunk_ids": [cids[4]] if len(cids) > 4 else cids
                     },
                     {
-                        "question": "Core Web Vitals में FID (First Input Delay) क्या दर्शाता है?",
+                        "question": "Google Core Web Vitals में मार्च 2024 से FID के स्थान पर कौन सा नया आधिकारिक इंटरैक्टिविटी मीट्रिक लागू किया गया है और इसकी अनुशंसित सीमा क्या है?",
                         "options": [
-                            "यूजर के पहले क्लिक/टैप पर ब्राउज़र के प्रतिक्रिया देने में लगा समय",
-                            "सर्वर का पहला रिस्पॉन्स टाइम",
-                            "CSS फाइल के डाउनलोड होने का समय",
-                            "डोमेन नाम के DNS रिज़ॉल्यूशन का समय"
+                            "INP (Interaction to Next Paint) — 200 मिलीसेकंड या उससे कम",
+                            "FCP (First Contentful Paint) — 1.8 सेकंड या उससे कम",
+                            "TTFB (Time to First Byte) — 800 मिलीसेकंड",
+                            "TBT (Total Blocking Time) — 300 मिलीसेकंड"
                         ],
                         "correct_index": 0,
-                        "explanation": "FID यूजर के पहले इंटरैक्शन (क्लिक, टैप, की-प्रेस) और मुख्य थ्रेड द्वारा उसे प्रोसेस करने के बीच की देरी को मापता है।",
-                        "topic": "FID Interactivity",
-                        "timestamp_ref": "00:07:25",
-                        "supporting_chunk_ids": [cids[2]] if len(cids) > 2 else cids
+                        "explanation": "Google ने मार्च 2024 में FID को बदलकर INP (Interaction to Next Paint) को आधिकारिक Core Web Vital बनाया, जो सभी यूजर इंटरैक्शन की लेटेंसी मापता है और 200ms से कम होना चाहिए।",
+                        "topic": "INP Responsiveness",
+                        "timestamp_ref": "00:02:24",
+                        "supporting_chunk_ids": [cids[8]] if len(cids) > 8 else cids
                     },
                     {
                         "question": "सोशल मीडिया प्लेटफॉर्म्स पर लिंक शेयर करते समय कार्ड प्रीव्यू को नियंत्रित करने के लिए कौन से टैग्स का उपयोग किया जाता है?",
@@ -431,18 +431,18 @@ class QuizGenerator:
                         "supporting_chunk_ids": [cids[4]] if len(cids) > 4 else cids
                     },
                     {
-                        "question": "Core Web Vitals mein FID (First Input Delay) kya evaluate karta hai?",
+                        "question": "Core Web Vitals mein March 2024 se FID ki jagah kaun sa official interactivity metric introduce kiya gaya hai?",
                         "options": [
-                            "User ke first click/tap par browser ki responsiveness delay",
-                            "Server connection establish hone ka time",
-                            "Video file buffering speed",
-                            "Total page download weight"
+                            "INP (Interaction to Next Paint) — Target threshold <= 200ms",
+                            "TTFB (Time to First Byte) — Target threshold <= 500ms",
+                            "FCP (First Contentful Paint) — Target threshold <= 1.5s",
+                            "Speed Index — Target threshold <= 3.0s"
                         ],
                         "correct_index": 0,
-                        "explanation": "FID user ke first action aur main thread response ke beech ka delay track karta hai.",
-                        "topic": "FID Interactivity",
-                        "timestamp_ref": "00:07:25",
-                        "supporting_chunk_ids": [cids[2]] if len(cids) > 2 else cids
+                        "explanation": "March 2024 mein Google ne FID ko replace karke INP ko official Core Web Vital banaya jo user interactions (clicks, taps, typing) ki responsiveness 200ms ke under expect karta hai.",
+                        "topic": "INP Responsiveness",
+                        "timestamp_ref": "00:02:24",
+                        "supporting_chunk_ids": [cids[8]] if len(cids) > 8 else cids
                     },
                     {
                         "question": "Social media sharing cards (WhatsApp, Twitter, LinkedIn) customize karne ke liye konse meta tags use hote hain?",
@@ -554,18 +554,18 @@ class QuizGenerator:
                         "supporting_chunk_ids": [cids[4]] if len(cids) > 4 else cids
                     },
                     {
-                        "question": "In Google Core Web Vitals, what interaction does First Input Delay (FID) measure?",
+                        "question": "In Google Core Web Vitals, which metric replaced First Input Delay (FID) in March 2024, and what is its target threshold?",
                         "options": [
-                            "The delay between a user's first input interaction and browser main-thread event handling",
-                            "The time taken to establish an HTTPS handshake",
-                            "The total frame rate rendering latency during scrolling",
-                            "The duration required to load background web workers"
+                            "Interaction to Next Paint (INP) with a threshold of <= 200 milliseconds",
+                            "First Contentful Paint (FCP) with a threshold of <= 1.0 second",
+                            "Time to Interactive (TTI) with a threshold of <= 3.8 seconds",
+                            "Total Blocking Time (TBT) with a threshold of <= 100 milliseconds"
                         ],
                         "correct_index": 0,
-                        "explanation": "FID quantifies responsiveness by timing the pause before the browser begins processing the user's initial tap or click.",
-                        "topic": "FID Interactivity",
-                        "timestamp_ref": "00:07:25",
-                        "supporting_chunk_ids": [cids[2]] if len(cids) > 2 else cids
+                        "explanation": "In March 2024, Google officially replaced FID with Interaction to Next Paint (INP) as a Core Web Vital to measure the responsiveness of all clicks, taps, and keypresses with a recommended target of <= 200ms.",
+                        "topic": "INP Responsiveness",
+                        "timestamp_ref": "00:02:24",
+                        "supporting_chunk_ids": [cids[8]] if len(cids) > 8 else cids
                     },
                     {
                         "question": "Which protocol of meta tags formats preview cards when pages are shared across social channels?",
