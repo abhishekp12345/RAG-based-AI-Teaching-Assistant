@@ -115,7 +115,7 @@ class SmartNotesPDF(FPDF):
         # Left URL & Attribution
         self.set_font(self.primary_font, "", 7.5)
         self.set_text_color(*COLOR_MUTED_SLATE)
-        self.cell(120, 5, text="https://learnmate-ai-rag.streamlit.app  •  PW APM Builder Screening", align="L")
+        self.cell(120, 5, text="https://learnmate-ai-rag.streamlit.app  •  Your Personal AI Teaching Assistant", align="L")
         
         # Right Page Numbers
         self.set_font(self.primary_font, "B", 8)
@@ -133,14 +133,7 @@ def render_banner(pdf: SmartNotesPDF, notes_data: Dict[str, Any]):
     pdf.set_xy(18, 17)
     pdf.set_font(pdf.primary_font, "B", 15)
     pdf.set_text_color(*COLOR_WHITE)
-    pdf.cell(130, 8, text="🎓 LearnMate AI — Smart Revision Notes", align="L")
-
-    # Screening Badge
-    pdf.set_xy(145, 18)
-    pdf.set_font(pdf.primary_font, "B", 8)
-    pdf.set_fill_color(255, 255, 255)
-    pdf.set_text_color(*COLOR_PRIMARY_BLUE)
-    pdf.cell(46, 6, text="PW APM SCREENING", border=0, align="C", fill=True)
+    pdf.cell(174, 8, text="🎓 LearnMate AI — Smart Revision Notes", align="L")
 
     # Course & Lecture Subtitle
     pdf.set_xy(18, 26)

@@ -1,6 +1,6 @@
 """
 LearnMate AI — Your Personal AI Teaching Assistant.
-Streamlit Application for PhysicsWallah APM Builder Screening.
+Streamlit Application for LearnMate AI.
 Features:
 - Ask AI: Lecture-grounded doubt resolution with timestamp verification.
 - Clickable lecture citations with instantaneous video seeking.
@@ -53,13 +53,13 @@ st.markdown("""
     /* Brand Header */
     .brand-header-container {
         display: flex;
-        align-items: center;
-        gap: 1rem;
+        flex-direction: column;
+        justify-content: center;
         background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
         color: white;
-        padding: 0.9rem 1.5rem;
+        padding: 1rem 1.75rem;
         border-radius: 12px;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.85rem;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
     .brand-title {
@@ -67,20 +67,13 @@ st.markdown("""
         font-weight: 700;
         margin: 0;
         letter-spacing: -0.02em;
+        line-height: 1.25;
     }
     .brand-tagline {
         font-size: 0.95rem;
-        opacity: 0.9;
-        margin: 0.15rem 0 0 0;
-    }
-    .brand-badge {
-        background: rgba(255, 255, 255, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.35);
-        padding: 0.35rem 0.75rem;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        margin-left: auto;
+        opacity: 0.92;
+        margin: 0.25rem 0 0 0;
+        letter-spacing: -0.01em;
     }
     
     /* Lecture Information Card */
@@ -360,13 +353,8 @@ def main():
     # -------------------------------------------------------------------------
     st.markdown("""
     <div class="brand-header-container">
-        <div>
-            <h1 class="brand-title">🎓 LearnMate AI</h1>
-            <p class="brand-tagline">Your Personal AI Teaching Assistant — Lecture-Grounded Doubt Resolution & Revision</p>
-        </div>
-        <div class="brand-badge">
-            PW APM Builder Screening
-        </div>
+        <h1 class="brand-title">🎓 LearnMate AI</h1>
+        <p class="brand-tagline">Your Personal AI Teaching Assistant — Lecture-Grounded Doubt Resolution & Revision</p>
     </div>
     """, unsafe_allow_html=True)
 
