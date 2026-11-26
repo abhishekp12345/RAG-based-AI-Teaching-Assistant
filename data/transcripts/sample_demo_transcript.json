@@ -4,27 +4,27 @@
   "segments": [
     {
       "start": 0.0,
-      "end": 60.0,
+      "end": 12.0,
       "text": "Welcome to Web Development. HTML stands for HyperText Markup Language and serves as the structural backbone of every modern web page. Every HTML document begins with a document type declaration <!DOCTYPE html> which informs the web browser that the page adheres to the modern HTML5 standard."
     },
     {
-      "start": 60.0,
-      "end": 120.0,
+      "start": 12.0,
+      "end": 24.0,
       "text": "The root element of any document is the <html> tag. Inside <html>, there are two primary sections: <head> and <body>. The <head> contains metadata such as the page title, character encoding UTF-8, and viewport configuration for responsive mobile display. The <body> contains the visible content rendered to the user."
     },
     {
-      "start": 120.0,
-      "end": 180.0,
+      "start": 24.0,
+      "end": 36.0,
       "text": "Heading tags range from <h1> to <h6>, with <h1> representing the most important main heading of the page. It is best practice for accessibility and SEO to maintain exactly one <h1> per web page. Paragraphs are wrapped in <p> tags, which are block-level elements."
     },
     {
-      "start": 180.0,
-      "end": 240.0,
+      "start": 36.0,
+      "end": 48.0,
       "text": "Hyperlinks are created using the anchor tag <a> with the href attribute specifying the destination URL. For images, we use the self-closing <img> tag. The <img> tag requires two essential attributes: src, which points to the image path, and alt, which provides descriptive alternative text for screen readers and SEO."
     },
     {
-      "start": 240.0,
-      "end": 300.0,
+      "start": 48.0,
+      "end": 60.0,
       "text": "SEO or Search Engine Optimization involves structuring HTML elements so search engines like Google can effectively crawl and index pages. Core Web Vitals measure real-world user experience, focusing on Largest Contentful Paint (LCP) for loading speed, First Input Delay (FID) or Interaction to Next Paint (INP) for responsiveness, and Cumulative Layout Shift (CLS) for visual stability."
     }
   ]

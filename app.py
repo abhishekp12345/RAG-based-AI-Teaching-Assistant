@@ -214,6 +214,14 @@ def load_lecture_manifest() -> List[Dict[str, Any]]:
     # Fallback manifest definition if file missing
     return [
         {
+            "lecture_id": "DEMO_01",
+            "lecture_title": "Introduction to HTML & Web Development Fundamentals | Demo Tutorial",
+            "tutorial_number": 1,
+            "duration_formatted": "00:01:00",
+            "duration_seconds": 60.0,
+            "video_filename": "demo_sample_lecture.mp4"
+        },
+        {
             "lecture_id": "LEC_03",
             "lecture_title": "Your First HTML Website | Sigma Web Development Course - Tutorial #2",
             "tutorial_number": 2,
@@ -349,7 +357,7 @@ def main():
     # -------------------------------------------------------------------------
     with st.sidebar:
         st.markdown("### 📚 Course Navigation")
-        st.caption("**Sigma Web Development Course** (HTML Module)")
+        st.caption("**HTML & Web Development Fundamentals** (Interactive Demonstration)")
 
         # Lecture Selection Dropdown
         lec_options = [lec["lecture_id"] for lec in lectures]
