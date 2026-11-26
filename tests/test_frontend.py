@@ -230,8 +230,14 @@ class TestStreamlitAppIntegration(unittest.TestCase):
         self.assertIn("smart_notes", at.session_state)
         self.assertGreaterEqual(len(at.session_state["smart_notes"]), 1)
 
-        # Check download button is present
-        dl_btns = [b for b in at.button if "Download Notes" in b.label or "dl_notes" in getattr(b, "key", "")]
+        # Check download button is present (either via at.download_button or at.button)
+        dl_btns = [
+            b for b in getattr(at, "download_button", [])
+            if "Download Notes" in (getattr(b, "label", "") or "") or "dl_" in (getattr(b, "key", "") or "")
+        ] or [
+            b for b in at.button
+            if "Download Notes" in (getattr(b, "label", "") or "") or "dl_notes" in (getattr(b, "key", "") or "")
+        ]
         self.assertTrue(len(dl_btns) >= 1)
 
     def test_apptest_tab3_practice_quiz_rendering(self):

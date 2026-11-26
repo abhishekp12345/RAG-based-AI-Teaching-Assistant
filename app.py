@@ -456,7 +456,7 @@ def main():
 
         st.markdown("---")
         # Clear Conversation Button
-        if st.button("🗑️ Clear Chat History", use_container_width=True):
+        if st.button("🗑️ Clear Chat History", key="btn_clear_chat", use_container_width=True):
             st.session_state["messages"] = []
             st.session_state["feedback_recorded"] = set()
             st.session_state["suggested_prompt"] = None
@@ -836,15 +836,27 @@ def main():
 
                 st.markdown(f"**Style:** `{selected_style_label}` | **Language:** `{selected_notes_lang}` | {n_badge}", unsafe_allow_html=True)
             with d_col2:
-                summarizer = LectureSummarizer(llm_client=LLMClient(mock_mode=True))
-                md_content = summarizer.export_notes_to_markdown(active_notes)
+                from pdf_exporter import generate_notes_pdf
+                pdf_payload = dict(active_notes)
+                pdf_payload["course_title"] = "Web Development Fundamentals"
+                pdf_payload["lecture_title"] = current_lec.get("lecture_title", f"Tutorial #{current_lec.get('tutorial_number')}").split("|")[0].strip()
+                pdf_payload["tutorial_number"] = current_lec.get("tutorial_number", 1)
+
+                # Generate publication-quality PDF directly in memory
+                pdf_data = generate_notes_pdf(pdf_payload)
+
+                tut_num = current_lec.get("tutorial_number", 1)
+                clean_style = selected_style.replace("-", "_").title()
+                clean_lang = selected_notes_lang.replace(" ", "_")
+                pdf_filename = f"LearnMate_AI_Lecture_{tut_num:02d}_{clean_style}_{clean_lang}.pdf"
+
                 st.download_button(
-                    label="💾 Download Notes (.md)",
-                    data=md_content,
-                    file_name=f"SmartNotes_Tutorial_{current_lec.get('tutorial_number')}_{selected_style}.md",
-                    mime="text/markdown",
+                    label="📄 Download Notes (PDF)",
+                    data=pdf_data,
+                    file_name=pdf_filename,
+                    mime="application/pdf",
                     use_container_width=True,
-                    key=f"dl_notes_{notes_cache_key}"
+                    key=f"dl_pdf_notes_{notes_cache_key}"
                 )
 
             st.markdown("---")

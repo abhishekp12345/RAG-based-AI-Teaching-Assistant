@@ -1,0 +1,115 @@
+{
+  "lecture_id": "DEMO_02",
+  "lecture_title": "Video, Audio & Media in HTML",
+  "notes_style": "key_concepts",
+  "language": "English",
+  "executive_summary": "🔑 CORE ARCHITECTURAL CONCEPTS:\nThis lecture provides an in-depth exploration of HTML5 multimedia embedding using native elements. It details the syntax and behavior of the <video> and <audio> tags, explains media control attributes (controls, autoplay, muted, loop, poster), demonstrates multi-format source fallbacks, and illustrates embedding third-party media streams using <iframe>.",
+  "learning_objectives": [
+    "Implement native HTML5 <video> and <audio> playback",
+    "Configure controls, muted autoplay policies, loop, and poster images",
+    "Provide cross-browser format fallbacks with nested <source> tags",
+    "Safely embed external third-party media using the <iframe> element"
+  ],
+  "sections": [
+    {
+      "heading": "1. HTML5 <video> Element & Playback Attributes",
+      "content": "The HTML5 <video> element embeds video streams directly without browser plugins. Key attributes include 'controls' (renders browser player UI), 'poster' (displays preview placeholder image), and 'autoplay' (requires 'muted' to satisfy modern browser user autoplay policies).",
+      "code_snippets": [
+        "<video src=\"media/sample.mp4\" controls width=\"640\" poster=\"thumbnail.jpg\">\n  Your browser does not support the video tag.\n</video>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0001",
+        "DEMO_02_CHK_0002"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_02_CHK_0001",
+          "timestamp": "00:00:00",
+          "tutorial_number": 2
+        },
+        {
+          "chunk_id": "DEMO_02_CHK_0002",
+          "timestamp": "00:18:00",
+          "tutorial_number": 2
+        }
+      ]
+    },
+    {
+      "heading": "2. HTML5 <audio> Tag & Format Fallbacks",
+      "content": "The <audio> element streams audio files. Because browser codec support varies, developers enclose multiple <source> elements (MP3, OGG, WAV) inside <audio> to ensure resilient playback across all operating systems.",
+      "code_snippets": [
+        "<audio controls autoplay muted>\n  <source src=\"podcast.mp3\" type=\"audio/mpeg\">\n  <source src=\"podcast.ogg\" type=\"audio/ogg\">\n</audio>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0003",
+        "DEMO_02_CHK_0004"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_02_CHK_0003",
+          "timestamp": "00:36:00",
+          "tutorial_number": 2
+        },
+        {
+          "chunk_id": "DEMO_02_CHK_0004",
+          "timestamp": "00:54:00",
+          "tutorial_number": 2
+        }
+      ]
+    },
+    {
+      "heading": "3. Third-Party Embedding with <iframe>",
+      "content": "The <iframe> (Inline Frame) element embeds external web documents and media players (such as YouTube or Google Maps). It uses 'src', 'width', 'height', 'title', and 'allowfullscreen' attributes.",
+      "code_snippets": [
+        "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" title=\"YouTube video\" allowfullscreen></iframe>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0005",
+        "DEMO_02_CHK_0006"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_02_CHK_0005",
+          "timestamp": "01:12:00",
+          "tutorial_number": 2
+        },
+        {
+          "chunk_id": "DEMO_02_CHK_0006",
+          "timestamp": "01:30:00",
+          "tutorial_number": 2
+        }
+      ]
+    }
+  ],
+  "definitions_and_terms": [
+    {
+      "term": "<video>",
+      "definition": "HTML5 element used to play video clips natively in browsers.",
+      "timestamp_ref": "00:01:20"
+    },
+    {
+      "term": "controls",
+      "definition": "Boolean attribute that exposes browser play, pause, seek, and volume UI.",
+      "timestamp_ref": "00:03:10"
+    },
+    {
+      "term": "<iframe>",
+      "definition": "Inline frame element embedding nested browsing contexts.",
+      "timestamp_ref": "00:09:45"
+    }
+  ],
+  "common_pitfalls": [
+    "Attempting unmuted autoplay, which modern browsers automatically block to protect user experience.",
+    "Omitting the 'controls' attribute, rendering the media completely inaccessible to users.",
+    "Specifying incorrect MIME types in <source type='...'> elements."
+  ],
+  "revision_checklist": [
+    "Is 'controls' specified on all student-facing <video> and <audio> elements?",
+    "Is 'muted' paired with 'autoplay' whenever automated playback is required?",
+    "Is a responsive poster image configured for the video preview?",
+    "Does the <iframe> embed include an accessible title attribute and allowfullscreen?"
+  ],
+  "generated_at": 1795683096.037919,
+  "is_mock": true,
+  "is_cached": false
+}

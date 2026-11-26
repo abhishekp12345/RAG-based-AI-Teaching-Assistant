@@ -1,0 +1,115 @@
+{
+  "lecture_id": "DEMO_01",
+  "lecture_title": "Your First HTML Website",
+  "notes_style": "key_concepts",
+  "language": "Hinglish",
+  "executive_summary": "🔑 CORE ARCHITECTURAL CONCEPTS:\nIs lecture mein humne apni pehli HTML website banayi aur web development ka foundation setup kiya. Humne HTML document skeleton (<!DOCTYPE html>, <html>, <head>, <body>), VS Code setup, Emmet boilerplate shortcut (!), headings (<h1> to <h6>), paragraphs (<p>), anchor links (<a>), aur images (<img>) implement karna seekha.",
+  "learning_objectives": [
+    "HTML5 basic boilerplate aur document tree samajhna",
+    "VS Code mein Emmet shortcut (!) se fast coding karna",
+    "Semantic heading tags (<h1> to <h6>) aur paragraph (<p>) use karna",
+    "Anchor tag (<a>) aur images (<img>) with alt text master karna"
+  ],
+  "sections": [
+    {
+      "heading": "1. HTML Document Skeleton & Boilerplate",
+      "content": "Har HTML5 page <!DOCTYPE html> se start hota hai jo browser ko standard mode batata hai. <html> tag poore document ko enclose karta hai, <head> mein metadata aur title hota hai, aur <body> mein web page ka visible content hota hai.",
+      "code_snippets": [
+        "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>My First Website</title>\n</head>\n<body>\n  <h1>Welcome to Web Dev!</h1>\n</body>\n</html>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0001",
+        "DEMO_01_CHK_0002"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_01_CHK_0001",
+          "timestamp": "00:00:00",
+          "tutorial_number": 1
+        },
+        {
+          "chunk_id": "DEMO_01_CHK_0002",
+          "timestamp": "00:18:00",
+          "tutorial_number": 1
+        }
+      ]
+    },
+    {
+      "heading": "2. Headings & Paragraph Formatting",
+      "content": "<h1> se lekar <h6> tak headings hoti hain. Page ka main heading hamesha <h1> hota hai jo single time use hona chahiye. Paragraphs ke liye <p> tag use karte hain.",
+      "code_snippets": [
+        "<h1>Main Course Heading</h1>\n<h2>Chapter 1: Foundations</h2>\n<p>This is a paragraph explaining the core concepts of HTML.</p>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0003",
+        "DEMO_01_CHK_0004"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_01_CHK_0003",
+          "timestamp": "00:36:00",
+          "tutorial_number": 1
+        },
+        {
+          "chunk_id": "DEMO_01_CHK_0004",
+          "timestamp": "00:54:00",
+          "tutorial_number": 1
+        }
+      ]
+    },
+    {
+      "heading": "3. Links & Images (<a> and <img> Tags)",
+      "content": "<a> (anchor tag) href attribute ke saath hyperlinks banata hai. External links ko new tab mein open karne ke liye target='_blank' lagate hain. <img> tag self-closing hota hai jisme src aur alt attributes sabse important hote hain.",
+      "code_snippets": [
+        "<a href=\"https://pw.live\" target=\"_blank\" rel=\"noopener\">Visit PhysicsWallah</a>\n<img src=\"images/logo.png\" alt=\"PW Logo\" width=\"200\">"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_01_CHK_0005",
+        "DEMO_01_CHK_0006"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_01_CHK_0005",
+          "timestamp": "01:12:00",
+          "tutorial_number": 1
+        },
+        {
+          "chunk_id": "DEMO_01_CHK_0006",
+          "timestamp": "01:30:00",
+          "tutorial_number": 1
+        }
+      ]
+    }
+  ],
+  "definitions_and_terms": [
+    {
+      "term": "<!DOCTYPE html>",
+      "definition": "Declaration that informs the browser this is an HTML5 document.",
+      "timestamp_ref": "00:02:15"
+    },
+    {
+      "term": "href",
+      "definition": "Hypertext Reference: Anchor tag ka attribute jo target URL define karta hai.",
+      "timestamp_ref": "00:11:30"
+    },
+    {
+      "term": "alt text",
+      "definition": "Alternative text jo image load na hone par ya screen readers ke liye display hota hai.",
+      "timestamp_ref": "00:15:20"
+    }
+  ],
+  "common_pitfalls": [
+    "Multiple <h1> tags ek single page par use karna jo SEO ranking distort karta hai.",
+    "<img> tag mein alt attribute omit karna jisse accessibility score down hota hai.",
+    "File paths mein spelling mistake ya wrong relative folder reference karna."
+  ],
+  "revision_checklist": [
+    "Kya <!DOCTYPE html> document ke start mein present hai?",
+    "Kya page par exactly ek <h1> tag hai?",
+    "Kya external links par target='_blank' use kiya gaya hai?",
+    "Kya har <img> tag mein meaningful alt text provided hai?"
+  ],
+  "generated_at": 1795683095.9644532,
+  "is_mock": true,
+  "is_cached": false
+}

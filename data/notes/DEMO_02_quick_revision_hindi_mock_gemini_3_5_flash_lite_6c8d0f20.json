@@ -1,0 +1,115 @@
+{
+  "lecture_id": "DEMO_02",
+  "lecture_title": "Video, Audio & Media in HTML",
+  "notes_style": "quick_revision",
+  "language": "Hindi",
+  "executive_summary": "⚡ QUICK REVISION SUMMARY:\n• इस लेक्चर में HTML5 मल्टीमीडिया एलिमेंट्स का व्यापक अध्ययन किया गया है। हमने <video> और <audio> टैग्स के मुख्य एट्रिब्यूट्स (controls, autoplay, muted, loop, poster) का उपयोग करना, विभिन्न ब्राउज़रों के लिए <source> टैग द्वारा मीडिया फॉर्मेट्स प्रदान करना और <iframe> द्वारा YouTube वीडियो एम्बेड करना सीखा।",
+  "learning_objectives": [
+    "HTML5 <video> और <audio> टैग्स का सिंटैक्स और उपयोग समझना",
+    "controls, autoplay, muted, loop और poster एट्रिब्यूट्स को सही तरीके से लागू करना",
+    "ब्राउज़र कम्पैटिबिलिटी के लिए <source> टैग का प्रयोग करना",
+    "<iframe> टैग के माध्यम से बाहरी मीडिया (जैसे YouTube) को सुरक्षित रूप से एम्बेड करना"
+  ],
+  "sections": [
+    {
+      "heading": "1. <video> टैग और मुख्य एट्रिब्यूट्स",
+      "content": "• HTML5 <video> टैग बिना किसी थर्ड-पार्टी प्लगइन के वीडियो चलाने की सुविधा देता है। controls एट्रिब्यूट प्ले/पॉज़ और वॉल्यूम बटन जोड़ता है। आधुनिक ब्राउज़रों में autoplay तभी काम करता है जब साथ में muted एट्रिब्यूट भी दिया गया हो।",
+      "code_snippets": [
+        "<video src=\"media/sample.mp4\" controls width=\"640\" poster=\"thumbnail.jpg\">\n  Your browser does not support the video tag.\n</video>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0001",
+        "DEMO_02_CHK_0002"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_02_CHK_0001",
+          "timestamp": "00:00:00",
+          "tutorial_number": 2
+        },
+        {
+          "chunk_id": "DEMO_02_CHK_0002",
+          "timestamp": "00:18:00",
+          "tutorial_number": 2
+        }
+      ]
+    },
+    {
+      "heading": "2. <audio> टैग और मल्टीपल सोर्स फॉलबैक्स",
+      "content": "• <audio> टैग वेबपेज पर साउंड फाइल्स चलाने के लिए उपयोग किया जाता है। अलग-अलग ब्राउज़रों के सपोर्ट के लिए <source> टैग के जरिए MP3, OGG या WAV फॉर्मेट्स दिए जा सकते हैं।",
+      "code_snippets": [
+        "<audio controls autoplay muted>\n  <source src=\"podcast.mp3\" type=\"audio/mpeg\">\n  <source src=\"podcast.ogg\" type=\"audio/ogg\">\n</audio>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0003",
+        "DEMO_02_CHK_0004"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_02_CHK_0003",
+          "timestamp": "00:36:00",
+          "tutorial_number": 2
+        },
+        {
+          "chunk_id": "DEMO_02_CHK_0004",
+          "timestamp": "00:54:00",
+          "tutorial_number": 2
+        }
+      ]
+    },
+    {
+      "heading": "3. <iframe> द्वारा एक्सटर्नल मीडिया एम्बेडिंग",
+      "content": "• <iframe> (Inline Frame) का उपयोग बाहरी वेबपेजों और YouTube वीडियो को अपने पेज में दिखाने के लिए किया जाता है। यह src, width, height, frameborder और allowfullscreen एट्रिब्यूट्स का उपयोग करता है।",
+      "code_snippets": [
+        "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" title=\"YouTube video\" allowfullscreen></iframe>"
+      ],
+      "supporting_chunk_ids": [
+        "DEMO_02_CHK_0005",
+        "DEMO_02_CHK_0006"
+      ],
+      "citations": [
+        {
+          "chunk_id": "DEMO_02_CHK_0005",
+          "timestamp": "01:12:00",
+          "tutorial_number": 2
+        },
+        {
+          "chunk_id": "DEMO_02_CHK_0006",
+          "timestamp": "01:30:00",
+          "tutorial_number": 2
+        }
+      ]
+    }
+  ],
+  "definitions_and_terms": [
+    {
+      "term": "<video>",
+      "definition": "HTML5 टैग जिसका उपयोग नेटिव वीडियो चलाने के लिए किया जाता है।",
+      "timestamp_ref": "00:01:20"
+    },
+    {
+      "term": "controls",
+      "definition": "एट्रिब्यूट जो यूजर को प्ले, पॉज और वॉल्यूम कंट्रोल उपलब्ध कराता है।",
+      "timestamp_ref": "00:03:10"
+    },
+    {
+      "term": "<iframe>",
+      "definition": "इनलाइन फ्रेम टैग जो किसी बाहरी डॉक्यूमेंट या वीडियो को एम्बेड करता है।",
+      "timestamp_ref": "00:09:45"
+    }
+  ],
+  "common_pitfalls": [
+    "बिना muted के autoplay लगाना, जिसे आधुनिक ब्राउज़र ब्लॉक कर देते हैं।",
+    "controls एट्रिब्यूट छोड़ देना, जिससे वीडियो लोड तो होता है पर यूजर उसे चला नहीं पाता।",
+    "गलत फाइल पाथ या अनुपलब्ध वीडियो फॉर्मेट देना।"
+  ],
+  "revision_checklist": [
+    "क्या आपने <video> टैग में controls एट्रिब्यूट शामिल किया है?",
+    "क्या autoplay के साथ muted एट्रिब्यूट मौजूद है?",
+    "क्या वीडियो के लिए poster इमेज निर्दिष्ट की गई है?",
+    "क्या <iframe> में allowfullscreen और उचित width/height दी गई है?"
+  ],
+  "generated_at": 1795683095.9689076,
+  "is_mock": true,
+  "is_cached": false
+}
